@@ -1,5 +1,5 @@
 {
-  "extends": "../false",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "types": [
       "node"
