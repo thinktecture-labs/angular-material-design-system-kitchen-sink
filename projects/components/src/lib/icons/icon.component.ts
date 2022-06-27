@@ -1,8 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
-import {faRocket} from '@fortawesome/free-solid-svg-icons/faRocket';
-import {faSmile} from '@fortawesome/free-solid-svg-icons/faSmile';
 import {Icon} from './icon';
+import {ICON_PLACEHOLDER} from './icon-placeholder';
 
 @Component({
   selector: 'labs-icon',
@@ -10,5 +9,5 @@ import {Icon} from './icon';
   styleUrls: ['icon.component.scss'],
 })
 export class IconComponent implements Icon {
-  @Input() icon: IconDefinition = faRocket;
+  @Input() icon: IconDefinition = ICON_PLACEHOLDER;
 }

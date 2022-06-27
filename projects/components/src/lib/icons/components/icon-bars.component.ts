@@ -7,6 +7,6 @@ import {Icon} from '../icon';
   templateUrl: '../icon.component.html',
   styleUrls: ['../icon.component.scss'],
 })
-export class IconBarsComponent  implements Icon{
-  icon = faBars;
+export class IconBarsComponent implements Icon{
+  readonly icon = faBars;
 }

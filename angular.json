@@ -42,6 +42,11 @@
               "projects/components/.storybook/style.scss",
               "projects/components/src/lib/styles/index.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/components/src/lib/styles/mixins"
+              ]
+            },
             "compodoc": true,
             "compodocArgs": ["-e", "json", "-d", "projects/components"]
           }
@@ -56,6 +61,11 @@
               "projects/components/.storybook/style.scss",
               "projects/components/src/lib/styles/index.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/components/src/lib/styles/mixins"
+              ]
+            },
             "compodoc": true,
             "compodocArgs": ["-e", "json", "-d", "projects/components"]
           }

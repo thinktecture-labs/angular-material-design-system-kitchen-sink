@@ -1,1 +1,3 @@
-<ng-container ></ng-container>
+<div class="actions">
+  <labs-icon-button *ngFor="let action of actions;trackBy: trackById" [icon]="action.icon"></labs-icon-button>
+</div>

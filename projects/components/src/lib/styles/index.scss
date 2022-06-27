@@ -1,1 +1,7 @@
+@use 'layout';
 @use 'themes';
+@use 'ripple';
+
+* {
+  box-sizing: border-box;
+}
