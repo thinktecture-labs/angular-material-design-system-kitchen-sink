@@ -1,0 +1,22 @@
+@use 'defaults';
+
+:root {
+  // typography
+  --font-family: 'Roboto', sans-serif;
+  // layout
+  --border-radius-xs: 0.25rem;
+  --border-radius-s: 0.5rem;
+  --border-radius-m: 1rem;
+  --border-radius-l: 1.5rem;
+  --border-radius-xl: 2rem;
+
+  --outline-size: 0.0625rem;
+  --outline-size-negative: -0.0625rem;
+
+  --highlight-content: unset; // use -2 to highlight surface only or unset to highlight content too
+
+  background-color: var(--color-background);
+
+  @include defaults.theme;
+}
+

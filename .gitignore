@@ -2,6 +2,7 @@
 
 # Compodoc
 documentation
+documentation.json
 
 # Compiled output
 /dist
@@ -43,3 +44,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+

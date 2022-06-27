@@ -1,0 +1,62 @@
+@use 'defaults';
+
+@mixin theme {
+  --color-primary: #FF584F;
+  --color-on-primary: rgba(0,0,0,.9);
+  --color-on-primary-variant: white;
+
+  --contrast-percent: calc(var(--contrast, 0) * 1%);
+
+  --color-background: hsl(0deg 0% calc(94% + var(--contrast-percent)));
+  --color-on-background: black;
+  --color-surface: white;
+  --color-on-surface: black;
+
+  --color-highlight: white;
+
+  --shadow-key-alpha: 0.14;
+  --shadow-ambient-alpha: 0.12;
+  --shadow-ambient-2-alpha: 0.20;
+
+  --color-emphasis-5: rgba(0, 0, 0, 87%);
+  --color-emphasis-4: rgba(0, 0, 0, 60%);
+  --color-emphasis-3: rgba(0, 0, 0, 38%);
+  --color-emphasis-2: rgba(0, 0, 0, 12%);
+  --color-emphasis-1: rgba(0, 0, 0, 4%);
+
+  --color-outline: hsla(0deg, 0%, calc(80% - var(--contrast-percent)), min(1, var(--contrast, 0)));
+
+  --state-hover-alpha: calc(.14 + var(--primary-constrast-patch, 0));
+  --state-focused-alpha: calc(.22 + var(--primary-constrast-patch, 0));
+  --state-pressed-alpha: calc(.2 + var(--primary-constrast-patch, 0));
+  --state-dragged-alpha: calc(.18 + var(--primary-constrast-patch, 0));
+  --state-selected-alpha: calc(.18 + var(--primary-constrast-patch, 0));
+  --state-disabled-alpha: calc(.38 + var(--primary-constrast-patch, 0));
+}
+
+@mixin more-contrast {
+  --contrast: 2;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @include theme;
+  }
+}
+
+@media (prefers-color-scheme: light) and (prefers-contrast: more) {
+  :root {
+    @include more-contrast;
+  }
+}
+
+
+.labs-light-theme {
+  @include theme;
+
+  @media (prefers-contrast: more) {
+    @include more-contrast;
+  }
+
+  @include defaults.theme;
+}

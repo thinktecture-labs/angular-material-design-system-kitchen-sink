@@ -31,6 +31,34 @@
             "tsConfig": "projects/components/tsconfig.spec.json",
             "karmaConfig": "projects/components/karma.conf.js"
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "port":6006,
+            "configDir": "projects/components/.storybook",
+            "browserTarget": "components:build-storybook",
+            "styles": [
+              "projects/components/.storybook/style.scss",
+              "projects/components/src/lib/styles/index.scss"
+            ],
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/components"]
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "outputDir": "dist/components/storybook-static",
+            "configDir": "projects/components/.storybook",
+            "browserTarget": "components:build-storybook",
+            "styles": [
+              "projects/components/.storybook/style.scss",
+              "projects/components/src/lib/styles/index.scss"
+            ],
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/components"]
+          }
         }
       }
     },
