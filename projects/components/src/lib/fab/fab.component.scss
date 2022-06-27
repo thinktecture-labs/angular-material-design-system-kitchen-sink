@@ -1,0 +1,15 @@
+:host {
+  border-radius: 1rem;
+  background-color: var(--color-primary); // TODO use the right color
+  color: var(--color-on-primary); // TODO use the right color
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+
+  &.size-small {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+  }
+}
