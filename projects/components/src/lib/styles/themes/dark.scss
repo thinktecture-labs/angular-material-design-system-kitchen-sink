@@ -1,8 +1,8 @@
 @use 'defaults';
 
 @mixin theme {
-  --color-primary: #FF584F;
-  --color-on-primary: rgba(0, 0, 0, .9);
+  --color-primary: #3D6FB4;
+  --color-on-primary: white;
   --color-on-primary-variant: white;
 
   --contrast-percent: calc(var(--contrast, 0) * 1%);

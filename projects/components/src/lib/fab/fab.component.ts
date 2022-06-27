@@ -1,6 +1,7 @@
 import {CommonModule} from '@angular/common';
 import {ChangeDetectionStrategy, Component, ElementRef, HostBinding, HostListener, Input} from '@angular/core';
 import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
+import {ZoomInOutAnimationFactory} from '../animations/zoom-in-out.animation';
 import {IconsModule} from '../icons/icons.module';
 import {RippleService} from '../ripple/ripple.service';
 
@@ -13,8 +14,10 @@ import {RippleService} from '../ripple/ripple.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[class.labs-ripple]': 'true',
-    '[class.size-small]': 'size === "small"'
-  }
+    '[class.size-small]': 'size === "small"',
+    '[@zoomInOut]': 'true'
+  },
+  animations: [ZoomInOutAnimationFactory()]
 })
 export class FabComponent {
   @Input() icon?: IconDefinition;

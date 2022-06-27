@@ -9,7 +9,7 @@ interface Ripple {
 }
 
 @Directive({selector: '[labsRipple]'})
-export class RippleDirective implements Ripple, OnChanges {
+export class RippleDirective implements Ripple {
   @Input() labsRipple: boolean | '' = true;
   @Input() labsRippleCenter: boolean | '' = false;
 

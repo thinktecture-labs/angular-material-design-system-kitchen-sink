@@ -1,13 +1,13 @@
 @use 'defaults';
 
 @mixin theme {
-  --color-primary: #FF584F;
-  --color-on-primary: rgba(0,0,0,.9);
+  --color-primary: #3D6FB4;
+  --color-on-primary: white;
   --color-on-primary-variant: white;
 
   --contrast-percent: calc(var(--contrast, 0) * 1%);
 
-  --color-background: hsl(0deg 0% calc(94% + var(--contrast-percent)));
+  --color-background: hsl(225deg 22% calc(96% + var(--contrast-percent)));
   --color-on-background: black;
   --color-surface: white;
   --color-on-surface: black;

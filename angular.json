@@ -12,7 +12,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/components/ng-package.json"
+            "project": "projects/components/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/components/src/lib/styles/mixins"
+              ]
+            }
           },
           "configurations": {
             "production": {

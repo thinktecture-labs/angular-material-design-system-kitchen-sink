@@ -1,4 +1,7 @@
+@use 'state';
+
 :host {
+  @include state.interactive;
   border-radius: 1rem;
   background-color: var(--color-primary); // TODO use the right color
   color: var(--color-on-primary); // TODO use the right color
@@ -6,6 +9,10 @@
   place-items: center;
   width: 3.5rem;
   height: 3.5rem;
+
+  &:not(.size-small){
+    font-size: 1.2rem;
+  }
 
   &.size-small {
     width: 2.5rem;
