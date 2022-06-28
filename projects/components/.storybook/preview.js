@@ -1,5 +1,6 @@
 import {setCompodocJson} from "@storybook/addon-docs/angular";
 import docJson from "../documentation.json";
+import {viewports} from './viewports';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {moduleMetadata} from "@storybook/angular";
 
@@ -33,6 +34,9 @@ export const parameters = {
         value: 'var(--color-background)',
       },
     ],
+  },
+  viewport: {
+    viewports,
   },
 }
 

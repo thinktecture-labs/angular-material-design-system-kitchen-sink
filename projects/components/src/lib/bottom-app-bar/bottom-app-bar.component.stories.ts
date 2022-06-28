@@ -6,7 +6,7 @@ import {Meta, Story} from '@storybook/angular';
 import {BottomAppBarComponent} from './bottom-app-bar.component';
 
 export default {
-  title: 'Components / Bottom App Bar',
+  title: 'Components / Bars / Bottom App Bar',
   component: BottomAppBarComponent,
   parameters: {layout: 'fullscreen'}
 } as Meta;

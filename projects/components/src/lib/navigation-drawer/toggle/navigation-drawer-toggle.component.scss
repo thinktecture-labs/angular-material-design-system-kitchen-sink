@@ -1,0 +1,40 @@
+@use 'state';
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+  align-items: flex-start;
+}
+
+.bar {
+  background-color: var(--color-on-background);
+  height: 0.125rem;
+  width: 1rem;
+  transition: transform .3s ease;
+
+  transform: scaleX(.8) translateX(-11%);
+
+  &:first-child {
+    transform: scaleX(1);
+  }
+
+  &:last-child {
+    transform: scaleX(.6) translateX(-30%);
+  }
+}
+
+:host {
+  @include state.interactive-circle;
+
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  &.collapsed {
+    .bar {
+      transform: scaleX(.2) scaleY(1.5);
+    }
+  }
+}
