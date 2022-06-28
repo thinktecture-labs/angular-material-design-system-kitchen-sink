@@ -1,4 +1,9 @@
 @use 'state';
+@use 'visibility';
+
+.hidden {
+  @include visibility.hidden;
+}
 
 :host {
   @include state.interactive;

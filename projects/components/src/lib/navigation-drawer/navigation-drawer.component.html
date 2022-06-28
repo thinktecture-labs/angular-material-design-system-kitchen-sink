@@ -6,6 +6,6 @@
       <labs-fab [size]="state === 'collapsed' ? 'small' : 'large' " [icon]="icon"></labs-fab>
     </ng-container>
     <div class="items"></div>
-    <labs-navigation-drawer-toggle [collapsed]="state === 'collapsed'"></labs-navigation-drawer-toggle>
+    <labs-navigation-drawer-toggle *labsScreenXSmallAndSmall [collapsed]="state === 'collapsed'"></labs-navigation-drawer-toggle>
   </div>
 </ng-container>
