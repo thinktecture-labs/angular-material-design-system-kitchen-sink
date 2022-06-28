@@ -1,2 +1,11 @@
-<labs-navigation-drawer-toggle></labs-navigation-drawer-toggle>
-<labs-fab></labs-fab>
+<ng-container *ngIf="navigationDrawerService.state$ | async as state">
+  <div class="backdrop" [ngClass]="['state-' + state]" (click)="handleBackdropClick()"></div>
+  <div class="drawer" [@drawer]="state" [ngClass]="['state-' + state]">
+    <ng-container *labsScreenXSmallAndSmall="false">
+      <labs-navigation-drawer-toggle [collapsed]="state === 'collapsed'"></labs-navigation-drawer-toggle>
+      <labs-fab [size]="state === 'collapsed' ? 'small' : 'large' " [icon]="icon"></labs-fab>
+    </ng-container>
+    <div class="items"></div>
+    <labs-navigation-drawer-toggle [collapsed]="state === 'collapsed'"></labs-navigation-drawer-toggle>
+  </div>
+</ng-container>

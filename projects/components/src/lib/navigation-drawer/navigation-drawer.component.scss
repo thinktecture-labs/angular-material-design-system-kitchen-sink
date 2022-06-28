@@ -1,7 +1,41 @@
-:host {
+@use 'elevation';
+
+.backdrop {
+  z-index: 16000; // TODO move the definition to common variables
+  background-color: var(--color-emphasis-3);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity .3s ease, backdrop-filter .3s ease;
+  opacity: 0;
+  pointer-events: none;
+
+  &.state-openedOverlay {
+    pointer-events: all;
+    opacity: 1;
+    backdrop-filter: blur(20px);
+  }
+}
+
+.drawer {
+  z-index: 16000; // TODO move the definition to common variables
   display: flex;
   flex-direction: column;
   width: 22.5rem;
-  padding: .75rem 1rem;
+  padding: .75rem 1rem 1.25rem 1rem;
   gap: var(--gap-m);
+  height: 100%;
+  background-color: var(--color-background);
+  border-top-right-radius: var(--border-radius-l) ;
+  border-bottom-right-radius: var(--border-radius-l) ;
+}
+
+.items {
+  height: 100%;
+}
+
+:host {
+  display: block;
 }

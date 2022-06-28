@@ -9,6 +9,7 @@
   place-items: center;
   width: 3.5rem;
   height: 3.5rem;
+  transition: width .3s ease, height .3s ease, font-size .3s ease, border-radius .3s ease;
 
   &:not(.size-small){
     font-size: 1.2rem;

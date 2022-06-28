@@ -9,3 +9,4 @@ export enum ScreenSize {
 }
 
 export const ScreenSizes = [ScreenSize.XSmall, ScreenSize.Small, ScreenSize.Medium, ScreenSize.Large, ScreenSize.XLarge];
+export const XSmallAndSmallScreenSizes = [ScreenSize.XSmall, ScreenSize.Small];
