@@ -1,0 +1,24 @@
+.image {
+  background-color: var(--color-emphasis-1);
+
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+}
+
+:host {
+  display: grid;
+  place-items: center;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  --size: 1.5rem;
+
+  &.size-medium {
+    --size: 2.5rem;
+  }
+
+  &.size-large {
+    --size: 7rem;
+  }
+}

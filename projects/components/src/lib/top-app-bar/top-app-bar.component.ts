@@ -3,6 +3,7 @@ import {ChangeDetectionStrategy, Component, Input, TrackByFunction} from '@angul
 import {EnterLeaveChildAnimationTrigger} from '../animations/enter-leave-child-animation-trigger';
 import {ExpandCollapseAnimationFactory} from '../animations/expand-collapse.animation';
 import {SlideInOutAnimationFactory} from '../animations/slide-in-out.animation';
+import {AvatarComponent} from '../avatar/avatar.component';
 import {IconButtonComponent} from '../icon-button/icon-button.component';
 import {AppBarAction} from '../model/bars/app-bar-action';
 
@@ -12,7 +13,7 @@ import {AppBarAction} from '../model/bars/app-bar-action';
   styleUrls: ['top-app-bar.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, IconButtonComponent],
+  imports: [CommonModule, IconButtonComponent, AvatarComponent],
   host: {
     '[@enterLeaveChildAnimationTrigger]': '',
     '[@verticalExpandCollapse]': '',

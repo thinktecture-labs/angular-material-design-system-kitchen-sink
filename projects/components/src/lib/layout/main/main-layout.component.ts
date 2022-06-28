@@ -22,7 +22,6 @@ import {ScreenSizeModule} from '../../utility/screen-size/screen-size.module';
 export class MainLayoutComponent {
   actions: AppBarAction[] = [
     {id: 'search', icon: faSearch, title: 'Search'},
-    {id: 'user', icon: faUser, title: 'User'}
   ];
 
   fabAction: AppBarAction = {id: 'fab', icon: faPlus, title: 'Add new item'};

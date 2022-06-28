@@ -1,6 +1,6 @@
 @mixin theme {
   accent-color: var(--color-primary);
-  font-family: 'Roboto', 'sans-serif';
+  font-family: var(--font-family);
   font-size: 16px;
   color:  var(--color-on-surface);
 }
