@@ -3,10 +3,14 @@
   gap: var(--gap-s)
 }
 
-:host {
+.bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 4rem;
   padding: .75rem 1rem;
+}
+
+:host {
+  display: block;
 }

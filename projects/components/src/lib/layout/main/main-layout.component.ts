@@ -6,6 +6,7 @@ import {faSearch} from '@fortawesome/free-solid-svg-icons/faSearch';
 import {faUser} from '@fortawesome/free-solid-svg-icons/faUser';
 import {BottomAppBarComponent} from '../../bottom-app-bar/bottom-app-bar.component';
 import {AppBarAction} from '../../model/bars/app-bar-action';
+import {NavigationDrawerComponent} from '../../navigation-drawer/navigation-drawer.component';
 import {TopAppBarComponent} from '../../top-app-bar/top-app-bar.component';
 import {ScreenSizeModule} from '../../utility/screen-size/screen-size.module';
 
@@ -15,12 +16,11 @@ import {ScreenSizeModule} from '../../utility/screen-size/screen-size.module';
   styleUrls: ['main-layout.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, BottomAppBarComponent, TopAppBarComponent, ScreenSizeModule]
+  imports: [CommonModule, BottomAppBarComponent, TopAppBarComponent, ScreenSizeModule, NavigationDrawerComponent]
 })
 
 export class MainLayoutComponent {
   actions: AppBarAction[] = [
-    {id: 'drawer', icon: faBars, title: 'Drawer Toggle'},
     {id: 'search', icon: faSearch, title: 'Search'},
     {id: 'user', icon: faUser, title: 'User'}
   ];

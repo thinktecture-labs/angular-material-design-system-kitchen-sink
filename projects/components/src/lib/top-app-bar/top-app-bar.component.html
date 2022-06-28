@@ -1,4 +1,6 @@
-<div class="drawer-toggle"></div>
-<div class="actions">
-  <labs-icon-button *ngFor="let action of actions;trackBy: trackById" [icon]="action.icon"></labs-icon-button>
+<div class="bar" @verticalSlideInOut>
+  <div class="drawer-toggle"></div>
+  <div class="actions">
+    <labs-icon-button *ngFor="let action of actions;trackBy: trackById" [icon]="action.icon"></labs-icon-button>
+  </div>
 </div>

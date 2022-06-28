@@ -1,6 +1,7 @@
 import {CommonModule} from '@angular/common';
 import {ChangeDetectionStrategy, Component, Input, TrackByFunction} from '@angular/core';
 import {EnterLeaveChildAnimationTrigger} from '../animations/enter-leave-child-animation-trigger';
+import {ExpandCollapseAnimationFactory} from '../animations/expand-collapse.animation';
 import {SlideInOutAnimationFactory} from '../animations/slide-in-out.animation';
 import {IconButtonComponent} from '../icon-button/icon-button.component';
 import {AppBarAction} from '../model/bars/app-bar-action';
@@ -14,9 +15,13 @@ import {AppBarAction} from '../model/bars/app-bar-action';
   imports: [CommonModule, IconButtonComponent],
   host: {
     '[@enterLeaveChildAnimationTrigger]': '',
-    '[@verticalSlideInOut]': ''
+    '[@verticalExpandCollapse]': '',
   },
-  animations: [EnterLeaveChildAnimationTrigger, SlideInOutAnimationFactory('verticalSlideInOut', 'Y', '-100%', '.45s')]
+  animations: [
+    EnterLeaveChildAnimationTrigger,
+    SlideInOutAnimationFactory('verticalSlideInOut', 'Y', '-100%', '.45s'),
+    ExpandCollapseAnimationFactory()
+  ]
 })
 export class TopAppBarComponent {
   @Input() actions?: AppBarAction[];

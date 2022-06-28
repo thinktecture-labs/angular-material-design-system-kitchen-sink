@@ -1,18 +1,18 @@
 import {animate, AnimationTriggerMetadata, state, style, transition, trigger} from '@angular/animations';
 import {AnimationDirection} from './animation-direction';
 
-export const SlideInOutAnimationFactory = (name: 'verticalSlideInOut' | 'horizontalSlideInOut' | any = 'horizontalSlideInOut', direction: AnimationDirection = 'X', distance = '0', duration = '.3s'): AnimationTriggerMetadata =>
+export const ExpandCollapseAnimationFactory = (name: 'verticalExpandCollapse' | 'horizontalExpandCollapse' | any = 'verticalExpandCollapse', direction: AnimationDirection = 'Y', duration = '.3s'): AnimationTriggerMetadata =>
   trigger(name, [
     state(
       '*',
       style({
-        transform: `translate${direction}(0)`,
+        [direction === 'Y' ? 'height' : 'width']: '*',
       }),
     ),
     state(
       'void',
       style({
-        transform: `translate${direction}(${distance})`,
+        [direction === 'Y' ? 'height' : 'width']: 0,
       }),
     ),
     transition('void <=> *', animate(`${duration} ease`)),

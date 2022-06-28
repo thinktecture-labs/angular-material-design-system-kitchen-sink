@@ -1,0 +1,19 @@
+.main {
+  height: 100%;
+  overflow: hidden;
+}
+.content {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+labs-bottom-app-bar {
+  grid-area: 2/ 1 / auto / span 2;
+}
+
+:host {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100vh;
+}
