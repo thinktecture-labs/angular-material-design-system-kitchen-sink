@@ -1,7 +1,7 @@
+import { Breakpoints } from '@angular/cdk/layout';
 import {ChangeDetectorRef, Directive, OnDestroy, OnInit, TemplateRef, ViewContainerRef} from '@angular/core';
 import {Subject} from 'rxjs';
 import {distinctUntilChanged, map, takeUntil} from 'rxjs/operators';
-import {ScreenSize} from './screen-size';
 import {ScreenSizeService} from './screen-size.service';
 
 @Directive()
@@ -9,7 +9,7 @@ export class AbstractScreenSizeDirective implements OnInit, OnDestroy {
   #destroy$$ = new Subject<void>();
   create?: boolean;
 
-  constructor(private readonly sizes: ScreenSize[],
+  constructor(private readonly sizes: string[],
               private readonly screenSizeService: ScreenSizeService,
               private readonly viewContainerRef: ViewContainerRef,
               private readonly templateRef: TemplateRef<any>,
@@ -48,7 +48,7 @@ export class AbstractScreenSizeDirective implements OnInit, OnDestroy {
 export class XSmallScreenSizeDirective extends AbstractScreenSizeDirective {
   constructor(screenSizeService: ScreenSizeService, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>,
               changeDetectorRef: ChangeDetectorRef) {
-    super([ScreenSize.XSmall], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
+    super([Breakpoints.XSmall], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
   }
 }
 
@@ -59,7 +59,7 @@ export class XSmallScreenSizeDirective extends AbstractScreenSizeDirective {
 export class SmallScreenSizeDirective extends AbstractScreenSizeDirective {
   constructor(screenSizeService: ScreenSizeService, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>,
               changeDetectorRef: ChangeDetectorRef) {
-    super([ScreenSize.Small], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
+    super([Breakpoints.Small], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
   }
 }
 
@@ -70,7 +70,7 @@ export class SmallScreenSizeDirective extends AbstractScreenSizeDirective {
 export class MediumScreenSizeDirective extends AbstractScreenSizeDirective {
   constructor(screenSizeService: ScreenSizeService, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>,
               changeDetectorRef: ChangeDetectorRef) {
-    super([ScreenSize.Medium], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
+    super([Breakpoints.Medium], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
   }
 }
 
@@ -81,7 +81,7 @@ export class MediumScreenSizeDirective extends AbstractScreenSizeDirective {
 export class LargeScreenSizeDirective extends AbstractScreenSizeDirective {
   constructor(screenSizeService: ScreenSizeService, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>,
               changeDetectorRef: ChangeDetectorRef) {
-    super([ScreenSize.Large], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
+    super([Breakpoints.Large], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
   }
 }
 
@@ -92,7 +92,7 @@ export class LargeScreenSizeDirective extends AbstractScreenSizeDirective {
 export class XLargeScreenSizeDirective extends AbstractScreenSizeDirective {
   constructor(screenSizeService: ScreenSizeService, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>,
               changeDetectorRef: ChangeDetectorRef) {
-    super([ScreenSize.XLarge], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
+    super([Breakpoints.XLarge], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
   }
 }
 
@@ -103,7 +103,7 @@ export class XLargeScreenSizeDirective extends AbstractScreenSizeDirective {
 export class XSmallAndSmallScreenSizeDirective extends AbstractScreenSizeDirective {
   constructor(screenSizeService: ScreenSizeService, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>,
               changeDetectorRef: ChangeDetectorRef) {
-    super([ScreenSize.XSmall, ScreenSize.Small], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
+    super([Breakpoints.XSmall, Breakpoints.Small], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
   }
 }
 
@@ -114,6 +114,6 @@ export class XSmallAndSmallScreenSizeDirective extends AbstractScreenSizeDirecti
 export class XMediumAndLargeScreenSizeDirective extends AbstractScreenSizeDirective {
   constructor(screenSizeService: ScreenSizeService, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>,
               changeDetectorRef: ChangeDetectorRef) {
-    super([ScreenSize.Medium, ScreenSize.Large, ScreenSize.XLarge], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
+    super([Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);
   }
 }

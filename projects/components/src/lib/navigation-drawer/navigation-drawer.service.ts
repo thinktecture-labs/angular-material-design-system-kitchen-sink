@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
-import {XSmallAndSmallScreenSizes} from '../utility/screen-size/screen-size';
+import {XSMALL_AND_SMALL_BREAKPOINTS} from '../utility/screen-size/screen-size';
 import {ScreenSizeService} from '../utility/screen-size/screen-size.service';
 
 export enum DrawerState {
@@ -17,7 +17,7 @@ export class NavigationDrawerService {
 
   constructor(private readonly screenSizeService: ScreenSizeService,) {
     screenSizeService.active$.subscribe((screenSize) => {
-      if (XSmallAndSmallScreenSizes.includes(screenSize)) {
+      if (XSMALL_AND_SMALL_BREAKPOINTS.includes(screenSize)) {
         this.state$$.next(DrawerState.closed);
       } else if (this.state$$.value === DrawerState.closed) {
         this.state$$.next(DrawerState.collapsed);
