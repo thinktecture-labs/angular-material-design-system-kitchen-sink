@@ -14,8 +14,7 @@
   --outline-size-negative: -0.0625rem;
 
   --highlight-content: unset; // use -2 to highlight surface only or unset to highlight content too
-
-  background-color: var(--color-background);
+  --color-backdrop: hsla(0,0%,0%,.38);
 
   @include defaults.theme;
 }

@@ -1,4 +1,5 @@
-import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnChanges} from '@angular/core';
+import {SimpleChanges} from '../model/simple-changes.type';
 
 @Component({
   selector: 'labs-avatar',
@@ -13,6 +14,14 @@ import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
   }
 })
 
-export class AvatarComponent {
+export class AvatarComponent implements OnChanges {
   @Input() size: 'small' | 'medium' | 'large' = 'small';
+  @Input() url?: string;
+  backgroundImageUrl?: string;
+
+  ngOnChanges(changes: SimpleChanges<AvatarComponent>): void {
+    if (changes.url) {
+      this.backgroundImageUrl = !!changes.url.currentValue ? `url('${changes.url.currentValue}')` : undefined;
+    }
+  }
 }

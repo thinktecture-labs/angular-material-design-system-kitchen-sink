@@ -7,8 +7,8 @@ export default {
 } as Meta;
 
 const Template: Story<AvatarComponent> = (props: AvatarComponent) => ({
-  props,
+  props: {url: props.url, size: props.size},
 });
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {url: 'sample-avatar.jpg', size: 'small'};
