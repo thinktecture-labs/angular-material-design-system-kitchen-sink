@@ -16,7 +16,7 @@ import {ScreenSizeModule} from '../../utility/screen-size/screen-size.module';
   styleUrls: ['main-layout.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, BottomAppBarComponent, TopAppBarComponent, ScreenSizeModule, NavigationDrawerComponent, LogoComponent]
+  imports: [CommonModule, BottomAppBarComponent, TopAppBarComponent, ScreenSizeModule, NavigationDrawerComponent, LogoComponent, RouterModule]
 })
 
 export class MainLayoutComponent {
