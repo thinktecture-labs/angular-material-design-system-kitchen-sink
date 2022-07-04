@@ -7,4 +7,6 @@ export default create({
   brandTitle: 'Angular Material Design System Kitchen Sink',
   brandImage: 'kitchen-sink-logo.svg',
   brandTarget: '_self',
+  appBg: 'rgba(0,0,0,.04)',
+
 })
