@@ -4,7 +4,12 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {faPlus} from '@fortawesome/free-solid-svg-icons/faPlus';
 import {AvatarComponent} from '../avatar/avatar.component';
 import {FabComponent} from '../fab/fab.component';
+import {IconComponent} from '../icons/icon.component';
+import {IconsModule} from '../icons/icons.module';
+import {ListItemComponent} from '../list/item/list-item.component';
+import {ListComponent} from '../list/list.component';
 import {LogoComponent} from '../logo/logo.component';
+import {RippleModule} from '../ripple/ripple.module';
 import {ScreenSizeModule} from '../utility/screen-size/screen-size.module';
 import {NavigationDrawerService} from './navigation-drawer.service';
 import {NavigationDrawerToggleComponent} from './toggle/navigation-drawer-toggle.component';
@@ -15,7 +20,18 @@ import {NavigationDrawerToggleComponent} from './toggle/navigation-drawer-toggle
   styleUrls: ['navigation-drawer.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, NavigationDrawerToggleComponent, FabComponent, ScreenSizeModule, AvatarComponent, LogoComponent],
+  imports: [
+    CommonModule,
+    NavigationDrawerToggleComponent,
+    FabComponent,
+    ScreenSizeModule,
+    AvatarComponent,
+    LogoComponent,
+    ListComponent,
+    ListItemComponent,
+    IconsModule,
+    RippleModule,
+  ],
   animations: [
     trigger('drawer', [
       state('closed', style({

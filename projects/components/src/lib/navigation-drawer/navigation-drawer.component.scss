@@ -1,4 +1,5 @@
 @use 'elevation';
+@use 'state';
 
 .backdrop {
   z-index: 16000; // TODO move the definition to common variables
@@ -28,10 +29,48 @@
   gap: var(--gap-m);
   height: 100%;
   background-color: var(--color-background);
-  border-top-right-radius: var(--border-radius-l) ;
-  border-bottom-right-radius: var(--border-radius-l) ;
+  border-top-right-radius: var(--border-radius-l);
+  border-bottom-right-radius: var(--border-radius-l);
   position: relative;
   overflow-y: hidden;
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding: 0 0 0 .75rem;
+    transition: transform .3s ease, height .3s ease;
+    overflow: hidden;
+
+    .title {
+      transition: opacity .3s ease;
+      margin-left: 1rem;
+    }
+  }
+
+  &.state-openedOverlay,
+  &.state-opened{
+    .item {
+      @include state.interactive;
+    }
+  }
+
+  &.state-collapsed {
+    .item {
+      @include state.interactive-circle;
+      height: 2.5rem;
+
+      .title {
+        opacity: 0;
+      }
+    }
+  }
 }
 
 .items {
@@ -43,6 +82,7 @@
   place-items: center;
   padding: var(--gap-xl);
 }
+
 
 :host {
   display: block;

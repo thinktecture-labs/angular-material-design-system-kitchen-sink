@@ -9,7 +9,12 @@
       <labs-avatar size="large" url="sample-avatar.jpg"></labs-avatar>
     </div>
 
-    <div class="items"></div>
+    <div class="items">
+      <div class="item" *ngFor="let item of navigationDrawerService.items$ | async" labsRipple>
+        <labs-icon [icon]="item.icon"></labs-icon>
+        <div class="title">{{item.title}}</div>
+      </div>
+    </div>
 
     <labs-navigation-drawer-toggle *labsScreenXSmallAndSmall [collapsed]="state === 'collapsed'"></labs-navigation-drawer-toggle>
 
