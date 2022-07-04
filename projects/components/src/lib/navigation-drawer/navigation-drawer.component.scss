@@ -31,6 +31,7 @@
   border-top-right-radius: var(--border-radius-l) ;
   border-bottom-right-radius: var(--border-radius-l) ;
   position: relative;
+  overflow-y: hidden;
 }
 
 .items {
@@ -41,15 +42,6 @@
   display: grid;
   place-items: center;
   padding: var(--gap-xl);
-}
-
-.logo {
-  background: url('logo.svg') center center no-repeat;
-  width: 2.875rem;
-  height: 2.21125rem;
-  position: absolute;
-  right: 1.25rem;
-  bottom: 1.25rem;
 }
 
 :host {

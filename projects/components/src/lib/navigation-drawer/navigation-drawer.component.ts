@@ -4,6 +4,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {faPlus} from '@fortawesome/free-solid-svg-icons/faPlus';
 import {AvatarComponent} from '../avatar/avatar.component';
 import {FabComponent} from '../fab/fab.component';
+import {LogoComponent} from '../logo/logo.component';
 import {ScreenSizeModule} from '../utility/screen-size/screen-size.module';
 import {NavigationDrawerService} from './navigation-drawer.service';
 import {NavigationDrawerToggleComponent} from './toggle/navigation-drawer-toggle.component';
@@ -14,7 +15,7 @@ import {NavigationDrawerToggleComponent} from './toggle/navigation-drawer-toggle
   styleUrls: ['navigation-drawer.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, NavigationDrawerToggleComponent, FabComponent, ScreenSizeModule, AvatarComponent],
+  imports: [CommonModule, NavigationDrawerToggleComponent, FabComponent, ScreenSizeModule, AvatarComponent, LogoComponent],
   animations: [
     trigger('drawer', [
       state('closed', style({
