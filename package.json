@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:components:storybook":  "ng run components:storybook",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
