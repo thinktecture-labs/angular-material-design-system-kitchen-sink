@@ -34,48 +34,6 @@
   position: relative;
   overflow-y: hidden;
   border: 1px solid transparent;
-
-  .items {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-s);
-  }
-
-  .item {
-    display: flex;
-    align-items: center;
-    height: 3rem;
-    padding: 0 0 0 .75rem;
-    transition: transform .3s ease, height .3s ease;
-    overflow: hidden;
-
-    .title {
-      transition: opacity .3s ease;
-      margin-left: 1rem;
-    }
-  }
-
-  &.state-openedOverlay,
-  &.state-opened{
-    .item {
-      @include state.interactive;
-    }
-  }
-
-  &.state-collapsed {
-    .item {
-      @include state.interactive-circle;
-      height: 2.5rem;
-
-      .title {
-        opacity: 0;
-      }
-    }
-  }
-}
-
-.items {
-  flex: 1;
 }
 
 .avatar-container {

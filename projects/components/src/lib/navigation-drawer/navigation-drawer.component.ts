@@ -57,8 +57,4 @@ export class NavigationDrawerComponent {
   handleBackdropClick(): void {
     this.navigationDrawerService.toggle();
   }
-
-  async navigate(item: NavigationItem): Promise<void> {
-    await this.navigationDrawerService.activate(item);
-  }
 }

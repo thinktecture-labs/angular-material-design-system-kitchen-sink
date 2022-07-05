@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Router} from '@angular/router';
 import {faCog} from '@fortawesome/free-solid-svg-icons/faCog';
 import {faDashboard} from '@fortawesome/free-solid-svg-icons/faDashboard';
 import {faPieChart} from '@fortawesome/free-solid-svg-icons/faPieChart';
@@ -28,8 +27,7 @@ export class NavigationDrawerService {
     {icon: faCog, title: 'Settings', route: ['settings']},
   ]).asObservable()
 
-  constructor(private readonly screenSizeService: ScreenSizeService,
-              private readonly router: Router) {
+  constructor(private readonly screenSizeService: ScreenSizeService) {
     screenSizeService.active$.subscribe((screenSize) => {
       if (XSMALL_AND_SMALL_BREAKPOINTS.includes(screenSize)) {
         this.state$$.next(DrawerState.closed);
@@ -49,9 +47,5 @@ export class NavigationDrawerService {
     } else if (this.state$$.value === DrawerState.closed) {
       this.state$$.next(DrawerState.openedOverlay);
     }
-  }
-
-  async activate(item: NavigationItem): Promise<boolean> {
-    return this.router.navigate(item.route);
   }
 }

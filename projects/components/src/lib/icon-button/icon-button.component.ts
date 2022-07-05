@@ -16,6 +16,7 @@ export class IconButtonComponent {
   @HostBinding('class.has-focus')
   private hasFocus: boolean = false;
   @Input() type: 'default' | 'primary' = 'default';
+  @Input() disabledFocus = false;
 
   ngOnInit(): void {
   }

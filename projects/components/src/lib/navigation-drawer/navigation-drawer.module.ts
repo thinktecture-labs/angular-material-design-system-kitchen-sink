@@ -8,6 +8,7 @@ import {ListModule} from '../list/list.module';
 import {LogoModule} from '../logo/logo.module';
 import {RippleModule} from '../ripple/ripple.module';
 import {ScreenSizeModule} from '../utility/screen-size/screen-size.module';
+import {NavigationDrawerListModule} from './navigation-drawer-list/navigation-drawer-list.module';
 
 import {NavigationDrawerComponent} from './navigation-drawer.component';
 import {NavigationDrawerToggleModule} from './toggle/navigation-drawer-toggle.module';
@@ -22,7 +23,7 @@ import {NavigationDrawerToggleModule} from './toggle/navigation-drawer-toggle.mo
     AvatarModule,
     LogoModule,
     ListModule,
-    ListItemModule,
+    ListItemModule, NavigationDrawerListModule,
   ],
   exports: [NavigationDrawerComponent],
   declarations: [NavigationDrawerComponent],

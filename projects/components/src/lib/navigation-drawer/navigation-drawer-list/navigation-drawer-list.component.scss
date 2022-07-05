@@ -1,0 +1,43 @@
+@use 'state';
+
+.item {
+  $minSize: 2.5rem;
+  display: flex;
+  align-items: center;
+  transition: width .3s ease, height .3s ease;
+  height: $minSize;
+  min-width: $minSize;
+  min-height: $minSize;
+
+  .title {
+    transition: all .3s ease;
+    margin-left: 1rem;
+  }
+
+  &:not(.state-collapsed) {
+    @include state.interactive;
+
+    height: 3rem;
+
+    labs-icon-button {
+      pointer-events: none;
+    }
+  }
+  labs-icon-button {
+    min-width: $minSize;
+    min-height: $minSize;
+  }
+}
+
+
+a{
+  color: currentColor;
+  text-decoration: none;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--gap-s);
+}

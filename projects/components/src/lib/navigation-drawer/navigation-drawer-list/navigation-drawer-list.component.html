@@ -1,0 +1,8 @@
+<ng-container *ngIf="navigationDrawerService.state$ | async as state">
+
+  <a class="item" [ngClass]="['state-' + state]" *ngFor="let item of navigationDrawerService.items$ | async"
+     [labsRipple]="state !== 'collapsed'" [routerLink]="item.route">
+    <labs-icon-button [icon]="item.icon" [disabledFocus]="true"></labs-icon-button>
+    <div class="title" *ngIf="state !== 'collapsed'" @horizontalExpandCollapse>{{item.title}}</div>
+  </a>
+</ng-container>
