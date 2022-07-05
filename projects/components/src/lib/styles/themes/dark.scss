@@ -8,9 +8,9 @@
   --contrast-percent: calc(var(--contrast, 0) * 1%);
 
   --color-background: hsla(0deg 0% calc(11% - var(--contrast-percent)));
-  --color-on-background: rgba(255, 255, 255, .60);
+  --color-on-background: rgba(255, 255, 255, .50);
   --color-surface: hsl(0deg 0% calc(18% + var(--contrast-percent)));
-  --color-on-surface: rgba(255, 255, 255, .87);
+  --color-on-surface: rgba(255, 255, 255, .67);
 
   --color-highlight: white;
 

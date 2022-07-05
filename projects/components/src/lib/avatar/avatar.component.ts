@@ -5,7 +5,6 @@ import {SimpleChanges} from '../model/simple-changes.type';
   selector: 'labs-avatar',
   templateUrl: 'avatar.component.html',
   styleUrls: ['avatar.component.scss'],
-  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[class.size-large]': 'size === "large"',

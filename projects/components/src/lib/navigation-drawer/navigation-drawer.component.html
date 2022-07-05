@@ -10,7 +10,7 @@
     </div>
 
     <div class="items">
-      <div class="item" *ngFor="let item of navigationDrawerService.items$ | async" labsRipple>
+      <div class="item" *ngFor="let item of navigationDrawerService.items$ | async" labsRipple  (click)="navigate(item)">
         <labs-icon [icon]="item.icon"></labs-icon>
         <div class="title">{{item.title}}</div>
       </div>

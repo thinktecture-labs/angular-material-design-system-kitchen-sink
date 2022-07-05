@@ -8,9 +8,9 @@
   --contrast-percent: calc(var(--contrast, 0) * 1%);
 
   --color-background: hsl(225deg 22% calc(96% + var(--contrast-percent)));
-  --color-on-background: black;
+  --color-on-background: hsl(0, 0%, 40%);
   --color-surface: white;
-  --color-on-surface: black;
+  --color-on-surface: hsl(0, 0%, 30%);
 
   --color-highlight: white;
 

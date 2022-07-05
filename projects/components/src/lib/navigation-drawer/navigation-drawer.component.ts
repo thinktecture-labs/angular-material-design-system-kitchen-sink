@@ -12,26 +12,14 @@ import {LogoComponent} from '../logo/logo.component';
 import {RippleModule} from '../ripple/ripple.module';
 import {ScreenSizeModule} from '../utility/screen-size/screen-size.module';
 import {NavigationDrawerService} from './navigation-drawer.service';
+import {NavigationItem} from './navigation-item';
 import {NavigationDrawerToggleComponent} from './toggle/navigation-drawer-toggle.component';
 
 @Component({
   selector: 'labs-navigation-drawer',
   templateUrl: 'navigation-drawer.component.html',
   styleUrls: ['navigation-drawer.component.scss'],
-  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    CommonModule,
-    NavigationDrawerToggleComponent,
-    FabComponent,
-    ScreenSizeModule,
-    AvatarComponent,
-    LogoComponent,
-    ListComponent,
-    ListItemComponent,
-    IconsModule,
-    RippleModule,
-  ],
   animations: [
     trigger('drawer', [
       state('closed', style({
@@ -68,5 +56,9 @@ export class NavigationDrawerComponent {
 
   handleBackdropClick(): void {
     this.navigationDrawerService.toggle();
+  }
+
+  async navigate(item: NavigationItem): Promise<void> {
+    await this.navigationDrawerService.activate(item);
   }
 }

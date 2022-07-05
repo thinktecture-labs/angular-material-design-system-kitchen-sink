@@ -1,10 +1,14 @@
 import {faPlus} from '@fortawesome/free-solid-svg-icons/faPlus';
-import {Meta, Story} from '@storybook/angular';
+import {Meta, moduleMetadata, Story} from '@storybook/angular';
 import {FabComponent} from './fab.component';
+import {FabModule} from './fab.module';
 
 export default {
   title: 'Components / Buttons / Fab',
   component: FabComponent,
+  decorators: [
+    moduleMetadata({imports: [FabModule]})
+  ]
 } as Meta;
 
 const Template: Story<FabComponent> = (props: FabComponent) => ({

@@ -5,13 +5,13 @@ import {NavigationDrawerService} from '../navigation-drawer.service';
   selector: 'labs-navigation-drawer-toggle',
   templateUrl: 'navigation-drawer-toggle.component.html',
   styleUrls: ['navigation-drawer-toggle.component.scss'],
-  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavigationDrawerToggleComponent {
   @HostBinding('class.collapsed')
   @Input() collapsed = false;
-  constructor(public readonly navigationDrawerService: NavigationDrawerService, ) {
+
+  constructor(public readonly navigationDrawerService: NavigationDrawerService,) {
   }
 
   @HostListener('click')

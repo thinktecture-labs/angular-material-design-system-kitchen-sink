@@ -10,7 +10,7 @@ import {IconComponent} from './icon.component';
     FontAwesomeModule,
     CommonModule
   ],
-  exports: [IconComponent, IconBarsComponent]
+  exports: [IconComponent, IconBarsComponent, FontAwesomeModule]
 })
 export class IconsModule {
 }

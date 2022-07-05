@@ -1,15 +1,12 @@
 import {ChangeDetectionStrategy, Component, ElementRef, HostBinding, HostListener, Input} from '@angular/core';
 import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
 import {ICON_PLACEHOLDER} from '../icons/icon-placeholder';
-import {IconsModule} from '../icons/icons.module';
 import {RippleService} from '../ripple/ripple.service';
 
 @Component({
   selector: 'labs-icon-button',
   templateUrl: 'icon-button.component.html',
   styleUrls: ['icon-button.component.scss'],
-  standalone: true,
-  imports: [IconsModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconButtonComponent {

@@ -1,15 +1,15 @@
 import {faRocket} from '@fortawesome/free-solid-svg-icons/faRocket';
 import {Meta, moduleMetadata, Story} from '@storybook/angular';
 import {IconsModule} from '../icons/icons.module';
-import {ListItemComponent} from './item/list-item.component';
 import {ListComponent} from './list.component';
+import {ListModule} from './list.module';
 
 export default {
   title: 'Components / List',
   component: ListComponent,
   decorators: [
     moduleMetadata({
-      imports: [ListItemComponent, IconsModule]
+      imports: [ListModule, IconsModule]
     })
   ]
 } as Meta;

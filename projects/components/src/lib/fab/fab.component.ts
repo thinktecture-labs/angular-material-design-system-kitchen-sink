@@ -1,16 +1,12 @@
-import {CommonModule} from '@angular/common';
 import {ChangeDetectionStrategy, Component, ElementRef, HostBinding, HostListener, Input} from '@angular/core';
 import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
 import {ZoomInOutAnimationFactory} from '../animations/zoom-in-out.animation';
-import {IconsModule} from '../icons/icons.module';
 import {RippleService} from '../ripple/ripple.service';
 
 @Component({
   selector: 'labs-fab',
   templateUrl: 'fab.component.html',
   styleUrls: ['fab.component.scss'],
-  standalone: true,
-  imports: [IconsModule, CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[class.labs-ripple]': 'true',
