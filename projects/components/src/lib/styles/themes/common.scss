@@ -16,6 +16,7 @@
   --highlight-content: unset; // use -2 to highlight surface only or unset to highlight content too
   --color-backdrop: hsla(0,0%,0%,.38);
   --app-logo: url('/logo.svg');
+  --color-outline-focus: var(--color-primary);
 
   @include defaults.theme;
 }
