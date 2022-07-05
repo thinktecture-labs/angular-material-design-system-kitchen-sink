@@ -28,7 +28,10 @@ button {
 
   :host-context(.type-elevated) & {
     @include elevation.get(1);
+    &[disabled]{
+      @include elevation.get(0);
+    }
+
     background-color: var(--color-surface);
   }
-
 }
