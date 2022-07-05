@@ -12,3 +12,9 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
+@mixin overflow-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
