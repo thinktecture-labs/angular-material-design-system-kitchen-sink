@@ -8,6 +8,11 @@
       "root": "projects/components",
       "sourceRoot": "projects/components/src",
       "prefix": "labs",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
