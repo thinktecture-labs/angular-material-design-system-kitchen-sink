@@ -33,6 +33,7 @@
   border-bottom-right-radius: var(--border-radius-l);
   position: relative;
   overflow-y: hidden;
+  border: 1px solid transparent;
 
   .items {
     display: flex;

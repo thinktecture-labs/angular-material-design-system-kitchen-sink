@@ -9,6 +9,7 @@
 
 .bar {
   background-color: var(--color-on-surface);
+  border: 1px solid transparent;
   height: 0.125rem;
   width: 1rem;
   transition: transform .3s ease;

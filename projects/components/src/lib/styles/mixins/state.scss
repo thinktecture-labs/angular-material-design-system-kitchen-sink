@@ -79,6 +79,7 @@
 @mixin interactive-circle {
   @include enabled(.1);
   border-radius: 50%;
+  border: 1px solid transparent;
   user-select: none;
   cursor: pointer;
 
