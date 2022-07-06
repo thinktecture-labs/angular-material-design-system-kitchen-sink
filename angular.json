@@ -45,7 +45,7 @@
         "storybook": {
           "builder": "@storybook/angular:start-storybook",
           "options": {
-            "port":6006,
+            "port": 6006,
             "configDir": "projects/components/.storybook",
             "browserTarget": "components:build-storybook",
             "styles": [
@@ -58,7 +58,12 @@
               ]
             },
             "compodoc": true,
-            "compodocArgs": ["-e", "json", "-d", "projects/components"]
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/components"
+            ]
           }
         },
         "build-storybook": {
@@ -77,7 +82,12 @@
               ]
             },
             "compodoc": true,
-            "compodocArgs": ["-e", "json", "-d", "projects/components"]
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/components"
+            ]
           }
         }
       }
@@ -107,8 +117,14 @@
               "projects/app/src/assets"
             ],
             "styles": [
-              "projects/app/src/styles.scss"
+              "projects/app/src/styles.scss",
+              "projects/components/src/lib/styles/index.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/components/src/lib/styles/mixins"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -182,5 +198,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
