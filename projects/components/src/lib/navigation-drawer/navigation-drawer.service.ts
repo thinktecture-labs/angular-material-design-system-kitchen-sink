@@ -1,12 +1,9 @@
-import {Injectable} from '@angular/core';
-import {faCog} from '@fortawesome/free-solid-svg-icons/faCog';
-import {faDashboard} from '@fortawesome/free-solid-svg-icons/faDashboard';
-import {faPieChart} from '@fortawesome/free-solid-svg-icons/faPieChart';
-import {faTasks} from '@fortawesome/free-solid-svg-icons/faTasks';
+import {inject, Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {XSMALL_AND_SMALL_BREAKPOINTS} from '../utility/screen-size/screen-size';
 import {ScreenSizeService} from '../utility/screen-size/screen-size.service';
 import {NavigationItem} from './navigation-item';
+import {NAVIGATION_ITEMS} from "../../../../app/src/app/app.module";
 
 export enum DrawerState {
   closed = 'closed',
@@ -17,15 +14,12 @@ export enum DrawerState {
 
 @Injectable({providedIn: 'root'})
 export class NavigationDrawerService {
+  private readonly navigationItems: NavigationItem[] = inject(NAVIGATION_ITEMS);
+
   protected state$$ = new BehaviorSubject<DrawerState>(DrawerState.opened);
   state$ = this.state$$.asObservable();
 
-  items$ = new BehaviorSubject<NavigationItem[]>([
-    {icon: faDashboard, title: 'Dashboard', route: ['dashboard']},
-    {icon: faTasks, title: 'Tasks', route: ['tasks']},
-    {icon: faPieChart, title: 'Reporting', route: ['reporting']},
-    {icon: faCog, title: 'Settings', route: ['settings']},
-  ]).asObservable()
+  items$ = new BehaviorSubject<NavigationItem[]>(this.navigationItems).asObservable()
 
   constructor(private readonly screenSizeService: ScreenSizeService) {
     screenSizeService.active$.subscribe((screenSize) => {
