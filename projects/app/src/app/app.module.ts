@@ -1,4 +1,4 @@
-import {InjectionToken, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -9,6 +9,7 @@ import {faDashboard} from "@fortawesome/free-solid-svg-icons/faDashboard";
 import {faCog} from "@fortawesome/free-solid-svg-icons/faCog";
 import {NavigationItem} from "../../../components/src/lib/navigation-drawer/navigation-item";
 import {faNewspaper, faPersonChalkboard, faRightFromBracket, faVideo} from "@fortawesome/free-solid-svg-icons";
+import {NAVIGATION_ITEMS} from "../../../components/src/lib/navigation-drawer/navigation-drawer-items.token";
 
 const EXAMPLE_NAVIGATION_ITEMS: NavigationItem[] = [
   {icon: faDashboard, title: 'Dashboard', route: ['dashboard']},
@@ -19,7 +20,6 @@ const EXAMPLE_NAVIGATION_ITEMS: NavigationItem[] = [
   {icon: faRightFromBracket, title: 'Logout', route: ['logout']},
 ];
 
-export const NAVIGATION_ITEMS = new InjectionToken<NavigationItem[]>("navigation items for navigation drawer")
 
 @NgModule({
   declarations: [

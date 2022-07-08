@@ -3,7 +3,7 @@ import {BehaviorSubject} from 'rxjs';
 import {XSMALL_AND_SMALL_BREAKPOINTS} from '../utility/screen-size/screen-size';
 import {ScreenSizeService} from '../utility/screen-size/screen-size.service';
 import {NavigationItem} from './navigation-item';
-import {NAVIGATION_ITEMS} from "../../../../app/src/app/app.module";
+import {NAVIGATION_ITEMS} from "./navigation-drawer-items.token";
 
 export enum DrawerState {
   closed = 'closed',
