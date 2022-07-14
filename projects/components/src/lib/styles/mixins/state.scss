@@ -1,9 +1,6 @@
 @use 'overlay';
 @use 'elevation';
 @use 'breakpoints';
-@include breakpoints.use(s,m){
-
-}
 
 @mixin enabled($scale: 1) {
   @include overlay.create(0, $scale);
