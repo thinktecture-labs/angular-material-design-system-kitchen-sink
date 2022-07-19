@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {ComponentStyle} from "../model/component-style.type";
 
 @Component({
   selector: 'labs-button',
@@ -16,6 +17,6 @@ import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 export class ButtonComponent {
 
   @Input() disabled: boolean = false;
-  @Input() type: 'text' | 'outlined' | 'filled' | 'elevated' = 'text';
+  @Input() type: ComponentStyle = 'text';
 
 }

@@ -1,0 +1,47 @@
+@use 'elevation';
+@use 'typography';
+
+:host {
+  @include typography.body-m;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-m);
+
+  &.type-outlined {
+    border: 1px solid var(--color-emphasis-2);
+  }
+
+  &.type-filled {
+    border: 1px solid var(--color-emphasis-2);
+  }
+
+  &.type-elevated {
+    @include elevation.get(1);
+  }
+}
+
+img {
+  max-height: 40%;
+  border-radius: var(--border-radius-m);
+}
+
+.title {
+  @include typography.title-m;
+  padding: 1rem;
+
+  .main {
+    @include typography.headline-m;
+    margin-bottom: 1rem;
+  }
+}
+
+.content {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.actions {
+  padding: 0 1rem 1rem 1rem;
+}
