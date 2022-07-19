@@ -15,4 +15,4 @@ const Template: Story<AvatarComponent> = (props: AvatarComponent) => ({
 });
 
 export const Default = Template.bind({});
-Default.args = {url: 'sample-avatar.jpg', size: 'small'};
+Default.args = {url: 'assets/sample-avatar.jpg', size: 'small'};
