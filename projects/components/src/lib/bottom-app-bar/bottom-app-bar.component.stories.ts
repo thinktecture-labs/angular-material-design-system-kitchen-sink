@@ -23,7 +23,6 @@ const Template: Story<BottomAppBarComponent> = (props: BottomAppBarComponent) =>
 export const Default = Template.bind({});
 Default.args = {
   actions: [
-    {id: 'drawer', icon: faBars, title: 'Drawer Toggle'},
     {id: 'search', icon: faSearch, title: 'Search'},
     {id: 'user', icon: faUser, title: 'User'}
   ],
@@ -34,7 +33,6 @@ Default.args = {
 export const NoFab = Template.bind({});
 NoFab.args = {
   actions: [
-    {id: 'drawer', icon: faBars, title: 'Drawer Toggle'},
     {id: 'search', icon: faSearch, title: 'Search'},
     {id: 'user', icon: faUser, title: 'User'}
   ],
