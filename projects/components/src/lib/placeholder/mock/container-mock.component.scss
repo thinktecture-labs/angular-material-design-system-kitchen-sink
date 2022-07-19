@@ -23,9 +23,9 @@
 }
 
 :host {
-  @include elevation.get(1);
+  @include elevation.get(0);
   display: block;
   background-color: var(--color-surface);
   width: 20rem;
-  height: 25rem;
+  height: 14rem;
 }
