@@ -1,0 +1,31 @@
+@use 'elevation';
+
+.avatar {
+  $size: 6rem;
+  width: $size;
+  height: $size;
+  background-color: var(--color-emphasis-2);
+  border-radius: 50%;
+}
+
+.title {
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-l);
+  padding: var(--gap-l);
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+
+:host {
+  @include elevation.get(1);
+  display: block;
+  background-color: var(--color-surface);
+  width: 20rem;
+  height: 25rem;
+}
