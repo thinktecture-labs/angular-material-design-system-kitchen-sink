@@ -28,7 +28,7 @@ class ExampleDataSource extends DataSource<PeriodicElement> {
   data = new BehaviorSubject<PeriodicElement[]>(ELEMENT_DATA);
 
   connect(): Observable<PeriodicElement[]> {
-    return this.data;
+    return this.data.asObservable();
   }
 
   disconnect() {
@@ -50,7 +50,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 const Template: Story<TableComponent<PeriodicElement> & AdditionalInformation> = (props: TableComponent<PeriodicElement> & AdditionalInformation) => ({
   template: `
-    <labs-table [dataSource]="dataSource">
+    <table labs-table [dataSource]="dataSource" style="width: 100%">
       <ng-container labsColumnDef="position">
           <th labs-header-cell *labsHeaderCellDef> No. </th>
           <td labs-cell *labsCellDef="let element"> {{element.position}} </td>
@@ -62,8 +62,8 @@ const Template: Story<TableComponent<PeriodicElement> & AdditionalInformation> =
       </ng-container>
 
       <ng-container labsColumnDef="weight">
-        <th labs-header-cell *labsHeaderCellDef> Weight </th>
-        <td labs-cell *labsCellDef="let element"> {{element.weight}} </td>
+        <th labs-header-cell *labsHeaderCellDef class="number-cell"> Weight </th>
+        <td labs-cell *labsCellDef="let element" class="number-cell"> {{element.weight}} </td>
       </ng-container>
 
       <ng-container labsColumnDef="symbol">
@@ -73,7 +73,14 @@ const Template: Story<TableComponent<PeriodicElement> & AdditionalInformation> =
 
        <tr labs-header-row *labsHeaderRowDef="displayedColumns"></tr>
        <tr labs-row *labsRowDef="let row; columns: displayedColumns;"></tr>
-  </labs-table>`,
+       <ng-template labsNoDataRow>
+          <tr clasS="labs-row">
+            <td class="labs-cell" [attr.colspan]="displayedColumns.length">
+            There is currently no data available.
+            </td>
+          </tr>
+       </ng-template>
+  </table>`,
   props: {dataSource: props.dataSource, displayedColumns: props.displayedColumns},
 });
 
@@ -83,3 +90,8 @@ Default.args = {
   displayedColumns: ['position', 'name', 'weight', 'symbol']
 };
 
+export const EmptyDataSource = Template.bind({});
+EmptyDataSource.args = {
+  dataSource: new ExampleDataSource().data = new BehaviorSubject<PeriodicElement[]>([]),
+  displayedColumns: ['position', 'name', 'weight', 'symbol']
+};

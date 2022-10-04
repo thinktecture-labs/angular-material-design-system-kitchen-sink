@@ -48,5 +48,5 @@ export class RowComponent extends CdkRow {
   providers: [{provide: CdkNoDataRow, useExisting: NoDataRowComonent}],
 })
 export class NoDataRowComonent extends CdkNoDataRow {
-  override _contentClassName = 'labs-mdc-no-data-row';
+  override _contentClassName = 'labs-no-data-row';
 }
