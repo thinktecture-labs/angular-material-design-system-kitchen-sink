@@ -1,0 +1,81 @@
+@use 'typography';
+
+.labs-table {
+  @include typography.body-m;
+  --table-header-text-align: left;
+  --table-cell-text-align: left;
+  --table-border-radius: 0;
+  --table-border-color: var(--color-on-surface);
+  --table-border-width: 1px;
+  --table-header-background-color: var(--color-surface);
+  --table-cell-background-color: var(--color-surface);
+  --table-row-hover-color: transparent;
+  border-spacing: 0;
+}
+
+tr {
+  text-align: var(--table-cell-text-align);
+  height: 52px;
+
+  &:not(:first-of-type):last-of-type {
+    td:first-of-type {
+      border-bottom-left-radius: var(--table-border-radius);
+    }
+
+    td:last-of-type {
+      border-bottom-right-radius: var(--table-border-radius);
+    }
+  }
+
+  &:hover {
+    td {
+      background-color: var(--table-row-hover-color);
+    }
+  }
+
+  &.labs-header-row {
+    height: 56px;
+  }
+
+  th:first-of-type {
+    border-top-left-radius: var(--table-border-radius);
+  }
+
+  th:last-of-type {
+    border-top-right-radius: var(--table-border-radius);
+  }
+
+  td:first-of-type, th:first-of-type {
+    border-left: solid;
+  }
+
+  td:last-of-type, th:last-of-type {
+    border-right: solid;
+  }
+
+
+}
+
+th {
+  border-top: solid;
+  background-color: var(--table-header-background-color);
+  cursor: default;
+}
+
+td {
+  background-color: var(--table-cell-background-color);
+  text-overflow: ellipsis;
+}
+
+th, td {
+  border-width: var(--table-border-width);
+  border-color: var(--table-border-color);
+  border-bottom: solid;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
+
+.number-cell {
+  text-align: right;
+}
