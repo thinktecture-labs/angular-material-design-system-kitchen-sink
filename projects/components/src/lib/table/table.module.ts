@@ -1,18 +1,29 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TableComponent} from './table.component';
-import {CellDefinitionDirective, HeaderCellDefinitionDirective} from "./cell";
-import {HeaderRowDefinitionDirective, RowDefinitionDirective} from "./row";
+import {CellDefinitionDirective, CellDirective, HeaderCellDefinitionDirective, HeaderCellDirective} from "./cell";
+import {
+  HeaderRowComponent,
+  HeaderRowDefinitionDirective,
+  NoDataRowComonent,
+  RowComponent,
+  RowDefinitionDirective
+} from "./row";
 import {ColumnDefinitionDirective} from "./column";
 import {CdkTableModule} from "@angular/cdk/table";
 
 const DECLARATIONS_AND_EXPORTS = [
   TableComponent,
-  RowDefinitionDirective,
-  ColumnDefinitionDirective,
   CellDefinitionDirective,
   HeaderCellDefinitionDirective,
-  HeaderRowDefinitionDirective
+  HeaderCellDirective,
+  CellDirective,
+  ColumnDefinitionDirective,
+  RowDefinitionDirective,
+  HeaderRowDefinitionDirective,
+  HeaderRowComponent,
+  RowComponent,
+  NoDataRowComonent
 ]
 
 @NgModule({

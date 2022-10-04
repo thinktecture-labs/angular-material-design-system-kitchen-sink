@@ -1,8 +1,8 @@
 import {Meta, moduleMetadata, Story} from '@storybook/angular';
 import {TableComponent} from "./table.component";
 import {TableModule} from "./table.module";
-import {CdkTableModule, DataSource} from "@angular/cdk/table";
 import {BehaviorSubject, Observable} from "rxjs";
+import {CdkTableModule, DataSource} from "@angular/cdk/table";
 
 export default {
   title: 'Components / Table',
@@ -23,7 +23,7 @@ interface AdditionalInformation {
   displayedColumns: string[];
 }
 
-export class ExampleDataSource extends DataSource<PeriodicElement> {
+class ExampleDataSource extends DataSource<PeriodicElement> {
 
   data = new BehaviorSubject<PeriodicElement[]>(ELEMENT_DATA);
 
@@ -51,28 +51,28 @@ const ELEMENT_DATA: PeriodicElement[] = [
 const Template: Story<TableComponent<PeriodicElement> & AdditionalInformation> = (props: TableComponent<PeriodicElement> & AdditionalInformation) => ({
   template: `
     <labs-table [dataSource]="dataSource">
-      <ng-container cdkColumnDef="position">
-          <th cdk-header-cell *cdkHeaderCellDef> No. </th>
-          <td cdk-cell *cdkCellDef="let element"> {{element.position}} </td>
+      <ng-container labsColumnDef="position">
+          <th labs-header-cell *labsHeaderCellDef> No. </th>
+          <td labs-cell *labsCellDef="let element"> {{element.position}} </td>
       </ng-container>
 
-      <ng-container cdkColumnDef="name">
-        <th cdk-header-cell *cdkHeaderCellDef> Name </th>
-        <td cdk-cell *cdkCellDef="let element"> {{element.name}} </td>
+      <ng-container labsColumnDef="name">
+        <th labs-header-cell *labsHeaderCellDef> Name </th>
+        <td labs-cell *labsCellDef="let element"> {{element.name}} </td>
       </ng-container>
 
-      <ng-container cdkColumnDef="weight">
-        <th cdk-header-cell *cdkHeaderCellDef> Weight </th>
-        <td cdk-cell *cdkCellDef="let element"> {{element.weight}} </td>
+      <ng-container labsColumnDef="weight">
+        <th labs-header-cell *labsHeaderCellDef> Weight </th>
+        <td labs-cell *labsCellDef="let element"> {{element.weight}} </td>
       </ng-container>
 
-      <ng-container cdkColumnDef="symbol">
-        <th cdk-header-cell *cdkHeaderCellDef> Symbol </th>
-        <td cdk-cell *cdkCellDef="let element"> {{element.symbol}} </td>
+      <ng-container labsColumnDef="symbol">
+        <th labs-header-cell *labsHeaderCellDef> Symbol </th>
+        <td labs-cell *labsCellDef="let element"> {{element.symbol}} </td>
       </ng-container>
 
-       <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
-       <tr cdk-row *cdkRowDef="let row; columns: displayedColumns;"></tr>
+       <tr labs-header-row *labsHeaderRowDef="displayedColumns"></tr>
+       <tr labs-row *labsRowDef="let row; columns: displayedColumns;"></tr>
   </labs-table>`,
   props: {dataSource: props.dataSource, displayedColumns: props.displayedColumns},
 });

@@ -4,6 +4,7 @@ import {CDK_ROW_TEMPLATE, CdkHeaderRow, CdkHeaderRowDef, CdkNoDataRow, CdkRow, C
 @Directive({
   selector: '[labsRowDef]',
   providers: [{provide: CdkRowDef, useExisting: RowDefinitionDirective}],
+  inputs: ['columns: labsRowDefColumns', 'when: labsRowDefWhen'],
 })
 export class RowDefinitionDirective<T> extends CdkRowDef<T> {
 }
@@ -11,8 +12,9 @@ export class RowDefinitionDirective<T> extends CdkRowDef<T> {
 @Directive({
   selector: '[labsHeaderRowDef]',
   providers: [{provide: CdkHeaderRowDef, useExisting: HeaderRowDefinitionDirective}],
+  inputs: ['columns: labsHeaderRowDef'],
 })
-export class HeaderRowDefinitionDirective<T> extends CdkHeaderRowDef {
+export class HeaderRowDefinitionDirective extends CdkHeaderRowDef {
 }
 
 @Component({
@@ -21,6 +23,9 @@ export class HeaderRowDefinitionDirective<T> extends CdkHeaderRowDef {
   encapsulation: ViewEncapsulation.None,
   exportAs: 'labsHeaderRow',
   providers: [{provide: CdkHeaderRow, useExisting: HeaderRowComponent}],
+  host: {
+    'class': 'labs-header-row'
+  }
 })
 export class HeaderRowComponent extends CdkHeaderRow {
 }
@@ -31,6 +36,9 @@ export class HeaderRowComponent extends CdkHeaderRow {
   encapsulation: ViewEncapsulation.None,
   exportAs: 'labsRow',
   providers: [{provide: CdkRow, useExisting: RowComponent}],
+  host: {
+    'class': 'labs-row'
+  }
 })
 export class RowComponent extends CdkRow {
 }

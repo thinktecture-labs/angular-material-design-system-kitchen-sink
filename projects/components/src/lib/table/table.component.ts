@@ -19,6 +19,9 @@ import {_DisposeViewRepeaterStrategy, _VIEW_REPEATER_STRATEGY} from "@angular/cd
     {provide: _COALESCED_STYLE_SCHEDULER, useClass: _CoalescedStyleScheduler},
   ],
   exportAs: 'labsTable',
+  host: {
+    'class': 'labs-table'
+  }
 })
 export class TableComponent<T> extends CdkTable<T> implements OnInit {
 }
