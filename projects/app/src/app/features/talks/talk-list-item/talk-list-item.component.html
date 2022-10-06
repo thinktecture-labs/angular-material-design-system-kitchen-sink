@@ -1,1 +1,7 @@
-<labs-card [title]="talk.title" [subTitle]="subTitle" [imageSrc]="talk.bannerImageSrc"></labs-card>
+<labs-card [imageSrc]="talk.bannerImageSrc" [subTitle]="subTitle" [title]="talk.title">
+  <div *ngIf="talk.tags" class="tags">
+    <ng-container *ngFor="let tag of talk.tags">
+      <labs-chip>{{tag}}</labs-chip>
+    </ng-container>
+  </div>
+</labs-card>
