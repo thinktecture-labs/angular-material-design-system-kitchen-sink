@@ -13,6 +13,14 @@ h2 {
   margin: 0;
 }
 
+
+.flex-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .scroll-container {
   display: flex;
   flex-direction: column;

@@ -12,7 +12,7 @@ import {map} from "rxjs/operators";
 export class DashboardComponent implements OnInit {
 
   talks$: Observable<Talk[]> = this.talksService.getUpcomingTalks();
-  myTalks$: Observable<Talk[]> = this.talks$.pipe(map(talks => talks.slice(0, 2)));
+  myTalks$: Observable<Talk[]> = this.talks$.pipe(map(talks => talks.slice(0, 1)));
 
 
   constructor(private readonly talksService: TalksService) {
