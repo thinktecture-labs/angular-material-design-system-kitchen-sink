@@ -4,6 +4,8 @@ import {CommonModule} from '@angular/common';
 import {ArticlesRoutingModule} from './articles-routing.module';
 import {ArticlesComponent} from './articles/articles/articles.component';
 import {ArticlesOverviewComponent} from './articles-overview/articles-overview.component';
+import {TableModule} from "../../../../../components/src/lib/table/table.module";
+import {ChipModule} from "../../../../../components/src/lib/chip/chip.module";
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import {ArticlesOverviewComponent} from './articles-overview/articles-overview.c
   ],
   imports: [
     CommonModule,
-    ArticlesRoutingModule
+    ArticlesRoutingModule,
+    TableModule,
+    ChipModule
   ]
 })
 export class ArticlesModule {

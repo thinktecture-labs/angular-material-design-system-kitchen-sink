@@ -1,1 +1,48 @@
-<p>articles works!</p>
+<table [dataSource]="articles" labs-table>
+  <ng-container labsColumnDef="title">
+    <th *labsHeaderCellDef labs-header-cell> Titel</th>
+    <td *labsCellDef="let element" labs-cell> {{element.title}} </td>
+  </ng-container>
+
+  <ng-container labsColumnDef="tags">
+    <th *labsHeaderCellDef labs-header-cell> Tags</th>
+    <td *labsCellDef="let element" labs-cell>
+      <div class="tags-container">
+
+        <ng-container *ngIf="!element.tags || element.tags?.length ===0">
+          ---
+        </ng-container>
+        <ng-container *ngIf="element.tags || element.tags?.length >= 0">
+          <ng-container *ngFor="let tag of element.tags">
+            <labs-chip>{{tag}}</labs-chip>
+          </ng-container>
+        </ng-container>
+      </div>
+    </td>
+  </ng-container>
+
+  <ng-container labsColumnDef="state">
+    <th *labsHeaderCellDef labs-header-cell> Status</th>
+    <td *labsCellDef="let element" labs-cell>
+      <labs-chip>{{element.state}}</labs-chip>
+    </td>
+  </ng-container>
+
+  <ng-container labsColumnDef="publishedAt">
+    <th *labsHeaderCellDef labs-header-cell> Veröffentlicht am</th>
+    <td *labsCellDef="let element" labs-cell>
+      <ng-container *ngIf="element.publishedAt">{{element.publishedAt | date}}</ng-container>
+      <ng-container *ngIf="!element.publishedAt"> ---</ng-container>
+    </td>
+  </ng-container>
+
+  <tr *labsHeaderRowDef="displayedColumns" labs-header-row></tr>
+  <tr *labsRowDef="let row; columns: displayedColumns;" labs-row></tr>
+  <ng-template labsNoDataRow>
+    <tr clasS="labs-row">
+      <td [attr.colspan]="displayedColumns.length" class="labs-cell">
+        Aktuell sind keine Artikeldaten vorhanden.
+      </td>
+    </tr>
+  </ng-template>
+</table>

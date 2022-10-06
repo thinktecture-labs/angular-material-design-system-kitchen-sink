@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Article} from "../../model/article.model";
 
 @Component({
   selector: 'labs-articles',
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.scss']
 })
-export class ArticlesComponent implements OnInit {
+export class ArticlesComponent {
+  @Input() articles: Article[] = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  displayedColumns = ["title", "tags", "state", "publishedAt"];
 }
