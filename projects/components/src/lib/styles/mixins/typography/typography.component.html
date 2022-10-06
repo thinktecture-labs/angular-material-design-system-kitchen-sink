@@ -1,3 +1,3 @@
-<div class="section" *ngFor="let section of sections">
-  <div [labsRenderTypographyValues]="item" *ngFor="let item of section"></div>
-</div>
+<ng-container *ngFor="let section of sections">
+  <labs-typography-card *ngFor="let item of section" [key]="item"></labs-typography-card>
+</ng-container>

@@ -1,12 +1,12 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {TypographyComponent} from './typography.component';
-import {TypographyDirective} from './typography.directive';
+import {TypographyCardModule} from "./typography-card/typography-card.module";
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [TypographyComponent, TypographyDirective],
-  exports: [TypographyComponent, TypographyDirective],
+  imports: [CommonModule, TypographyCardModule],
+  declarations: [TypographyComponent],
+  exports: [TypographyComponent],
 })
 export class TypographyModule {
 

@@ -1,0 +1,36 @@
+<div class="chips">
+  <div class="row">
+  <div class="chip"><span class="key">token</span><span class="value">md.sys.typescale.{{key}}</span></div>
+  <div class="chip"><span class="key">font</span><span class="value">{{fontFamily}}</span></div>
+  </div>
+  <div class="row">
+  <div class="chip"><span class="key">mixin</span><span class="value">typography.{{category}}-{{sizeShortcut}}</span></div>
+  </div>
+</div>
+<div class="preview">
+<div #sample [class]="'sample ' + key">{{category}}</div>
+  <div class="badge">{{sizeShortcut}}</div>
+</div>
+<div class="third">
+  <div class="item">
+    <div>{{fontSize}}</div>
+    <div>size</div>
+  </div>
+
+  <div class="item">
+    <div>{{lineHeight}}</div>
+    <div>line-height</div>
+  </div>
+
+  <div class="item stretch"></div>
+
+  <div class="item">
+    <div>{{letterSpacing}}</div>
+    <div>tracking</div>
+  </div>
+
+  <div class="item">
+    <div>{{weight}}</div>
+    <div>weight</div>
+  </div>
+</div>
