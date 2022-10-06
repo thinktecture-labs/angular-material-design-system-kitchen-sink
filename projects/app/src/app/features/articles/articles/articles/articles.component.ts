@@ -1,5 +1,4 @@
-import {Component, Input} from '@angular/core';
-import {Article} from "../../model/article.model";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'labs-articles',
@@ -7,7 +6,5 @@ import {Article} from "../../model/article.model";
   styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent {
-  @Input() articles: Article[] = [];
 
-  displayedColumns = ["title", "tags", "state", "publishedAt"];
 }

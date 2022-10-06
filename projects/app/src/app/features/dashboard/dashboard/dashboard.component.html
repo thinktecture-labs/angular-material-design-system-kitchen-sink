@@ -1,12 +1,13 @@
 <h1>Dashboard</h1>
 <div class="grid">
-  <labs-dash-list class="talks" title="Nächste Talks" [showAllRoute]="['/talks']"
-                  [dataSource]="(talks$ |async) ?? []" [listItemTemplate]="talkTemplate"></labs-dash-list>
+  <labs-dash-list [dataSource]="(talks$ |async) ?? []" [listItemTemplate]="talkTemplate" [showAllRoute]="['/talks']"
+                  class="talks" title="Nächste Talks"></labs-dash-list>
   <labs-content-creation-overview></labs-content-creation-overview>
-  <labs-articles-overview></labs-articles-overview>
+  <labs-articles-overview [articles]="(articles$ | async) ?? []"></labs-articles-overview>
 
-  <labs-dash-list class="webinars" title="Nächste Webinars" [showAllRoute]="['/webinars']"
-                  [dataSource]="(myTalks$| async) ?? []" [listItemTemplate]="talkTemplate"></labs-dash-list>
+  <labs-dash-list [dataSource]="(myTalks$| async) ?? []" [listItemTemplate]="talkTemplate"
+                  [showAllRoute]="['/webinars']"
+                  class="webinars" title="Nächste Webinars"></labs-dash-list>
   <labs-conten-mix></labs-conten-mix>
 </div>
 

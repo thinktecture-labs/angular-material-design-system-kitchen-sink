@@ -1,5 +1,4 @@
-import {Component} from '@angular/core';
-import {ARTICLES_DATA} from "../articles.data";
+import {Component, Input} from '@angular/core';
 import {Article} from "../model/article.model";
 
 @Component({
@@ -8,5 +7,7 @@ import {Article} from "../model/article.model";
   styleUrls: ['./articles-overview.component.scss']
 })
 export class ArticlesOverviewComponent {
-  articles: Article[] = ARTICLES_DATA;
+  @Input() articles: Article[] = [];
+
+  displayedColumns = ["title", "tags", "state", "publishedAt"];
 }
