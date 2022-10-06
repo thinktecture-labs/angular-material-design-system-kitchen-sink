@@ -29,5 +29,20 @@ export const ARTICLES_DATA: Article[] = [
     tags: ["angular", "blazor"],
     state: ArticleState.Planned,
   },
+  {
+    title: "Lorem ipsum dolor sit amet",
+    tags: ["angular", "blazor"],
+    state: ArticleState.Planned,
+  },
+  {
+    title: "Lorem ipsum dolor sit amet",
+    tags: ["angular", "blazor"],
+    state: ArticleState.Planned,
+  },
 
+  {
+    title: "Lorem ipsum dolor sit amet",
+    tags: ["angular", "blazor"],
+    state: ArticleState.Planned,
+  },
 ]
