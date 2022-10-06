@@ -3,6 +3,7 @@
 
 :host {
   @include typography.body-m;
+  --card-image-max-height: 40%;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -14,23 +15,31 @@
   &.type-outlined {
     border-color: var(--color-emphasis-2);
   }
-  
+
   &.type-elevated {
     @include elevation.get(1);
   }
 }
 
-img {
-  max-height: 40%;
+.image-container {
+  width: 100%;
+  max-height: var(--card-image-max-height);
   border-radius: var(--border-radius-m);
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 .title {
-  @include typography.title-m;
+  @include typography.body-m;
+  font-weight: 200;
   padding: 1rem;
 
   .main {
-    @include typography.headline-m;
+    @include typography.title-m;
     margin-bottom: 1rem;
   }
 }

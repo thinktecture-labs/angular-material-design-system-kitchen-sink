@@ -1,4 +1,6 @@
-<img *ngIf="imageSrc" [src]="imageSrc">
+<div class="image-container">
+  <img *ngIf="imageSrc" [src]="imageSrc">
+</div>
 <div *ngIf="title" class="title">
   <div class="main">{{ title }}</div>
   <ng-container *ngIf="subTitle">{{ subTitle }}</ng-container>
