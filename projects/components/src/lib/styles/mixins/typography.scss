@@ -1,37 +1,37 @@
 @use 'sass:meta';
 
 @mixin display-l {
-  font: 3.5625rem / 4rem var(--font-family);
+  font: 400 3.5625rem / 4rem var(--font-family);
   letter-spacing: 0;
 }
 
 @mixin display-m {
-  font: 2.8125rem / 3.25rem var(--font-family);
+  font: 400 2.8125rem / 3.25rem var(--font-family);
   letter-spacing: 0;
 }
 
 @mixin display-s {
-  font: 2.25rem / 2.75rem var(--font-family);
+  font: 400 2.25rem / 2.75rem var(--font-family);
   letter-spacing: 0;
 }
 
 @mixin headline-l {
-  font: 2rem / 2.5rem var(--font-family);
+  font: 400 2rem / 2.5rem var(--font-family);
   letter-spacing: 0;
 }
 
 @mixin headline-m {
-  font: 1.75rem / 2.25rem var(--font-family);
+  font: 400 1.75rem / 2.25rem var(--font-family);
   letter-spacing: 0;
 }
 
 @mixin headline-s {
-  font: 1.5rem / 2rem var(--font-family);
+  font: 400 1.5rem / 2rem var(--font-family);
   letter-spacing: 0;
 }
 
 @mixin title-l {
-  font: 500 1.375rem / 1.75rem var(--font-family);
+  font: 400 1.375rem / 1.75rem var(--font-family);
   letter-spacing: 0;
 }
 

@@ -1,0 +1,11 @@
+:root {
+  /* colors */
+  --md-sys-color-primary: #FF006C;
+  --md-sys-color-on-primary: #000000;
+  /* typescale */
+  --md-sys-typescale-display-large-font: "Roboto";
+  --md-sys-typescale-display-large-size: "57px";
+}
+
+
+

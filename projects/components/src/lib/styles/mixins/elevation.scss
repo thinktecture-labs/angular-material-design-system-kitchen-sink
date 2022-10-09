@@ -5,7 +5,8 @@
 // spec: https://material.io/design/environment/elevation.html#default-elevations
 // spec: https://material.io/design/environment/light-shadows.html
 
-// z-index: highlighting, key shadow, ambient shadow, ambient shadow
+// map structure:
+// z-index: highlighting, (key shadow), (ambient shadow), (ambient shadow)
 $elevations: (
   0: 0 (0 0) (0 0) (0 0),
   1: 0.01 (1 1) (2 1) (1 3),
