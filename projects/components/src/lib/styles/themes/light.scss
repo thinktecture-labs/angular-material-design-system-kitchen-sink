@@ -15,11 +15,19 @@
 }
 
 @mixin emphasis {
-  --md-sys-color-emphasis-5: rgba(0, 0, 0, 87%);
-  --md-sys-color-emphasis-4: rgba(0, 0, 0, 60%);
-  --md-sys-color-emphasis-3: rgba(0, 0, 0, 38%);
-  --md-sys-color-emphasis-2: rgba(0, 0, 0, 12%);
-  --md-sys-color-emphasis-1: rgba(0, 0, 0, 4%);
+  --md-sys-color-surface-emphasis-5: rgba(0, 0, 0, 87%);
+  --md-sys-color-surface-emphasis-4: rgba(0, 0, 0, 60%);
+  --md-sys-color-surface-emphasis-3: rgba(0, 0, 0, 38%);
+  --md-sys-color-surface-emphasis-2: rgba(0, 0, 0, 12%);
+  --md-sys-color-surface-emphasis-1: rgba(0, 0, 0, 4%);
+  --md-sys-color-surface-emphasis-0: rgba(0, 0, 0, 0%);
+
+  --md-sys-color-primary-emphasis-5: rgba(255, 255, 255, 100%);
+  --md-sys-color-primary-emphasis-4: rgba(255, 255, 255, 74%);
+  --md-sys-color-primary-emphasis-3: rgba(255, 255, 255, 38%);
+  --md-sys-color-primary-emphasis-2: rgba(255, 255, 255, 18%);
+  --md-sys-color-primary-emphasis-1: rgba(255, 255, 255, 10%);
+  --md-sys-color-primary-emphasis-0: rgba(255, 255, 255, 0%);
 }
 
 @mixin states {
@@ -32,7 +40,7 @@
 }
 
 @mixin placeholder {
-  --color-content-placeholder: var(--md-sys-color-emphasis-4);
+  --color-content-placeholder: var(--md-sys-color-surface-emphasis-4);
   --color-content-placeholder-highlight: hsla(0, 0%, 100%, 0.6);
 }
 

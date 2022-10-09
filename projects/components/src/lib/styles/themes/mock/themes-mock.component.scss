@@ -31,7 +31,7 @@
   position: relative;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
-  box-shadow: 0 1px 0px var(--md-sys-color-emphasis-2);
+  box-shadow: 0 1px 0px var(--md-sys-color-surface-emphasis-2);
   z-index: 1;
   overflow: hidden;
 
@@ -46,7 +46,7 @@
   }
 
   &::before {
-    $c: var(--md-sys-color-emphasis-1);
+    $c: var(--md-sys-color-surface-emphasis-1);
     $size: 1rem;
     $halfSize: calc($size / 2);
     background: linear-gradient(45deg, $c 25%, transparent 0) 0 0,
@@ -75,7 +75,7 @@
   }
 
   .value {
-    color: var(--md-sys-color-emphasis-4);
+    color: var(--md-sys-color-surface-emphasis-4);
   }
 }
 

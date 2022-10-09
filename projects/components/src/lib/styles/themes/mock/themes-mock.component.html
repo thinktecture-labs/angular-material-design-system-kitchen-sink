@@ -2,7 +2,7 @@
   <div class="label">{{group.key}}</div>
   <div class="items">
     <div class="card" *ngFor="let color of group.colors">
-      <div class="color" [style.color]="'var(' + color.key + ')'" [title]="'The current color:' + color.value"></div>
+      <div class="color" [style.color]="'var(' + color.key + ')'" [style.backgroundColor]="color.background" [title]="'The current color:' + color.value"></div>
       <div class="description">
         <div class="key" title="The CSS variable name">{{color.key}}</div>
         <div class="value" title="The CSS variable value">{{color.value}}</div>
