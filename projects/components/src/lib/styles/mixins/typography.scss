@@ -1,12 +1,13 @@
-@use 'sass:meta';
-
 @mixin display-l {
   font: 400 3.5625rem / 4rem var(--md-sys-font-family);
   letter-spacing: 0;
 }
 
 @mixin display-m {
-  font: 400 2.8125rem / 3.25rem var(--md-sys-font-family);
+  font-size: 2.8125rem;
+  line-height:  3.25rem;
+  font-weight: 400;
+  font-family: var(--md-sys-font-family);
   letter-spacing: 0;
 }
 
