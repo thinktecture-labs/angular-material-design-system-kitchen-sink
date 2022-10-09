@@ -1,6 +1,6 @@
 @use 'defaults';
 
-@mixin theme {
+@mixin common-colors {
   --color-primary: #3D6FB4;
   --color-on-primary: white;
 
@@ -13,31 +13,50 @@
 
   --color-highlight: white;
 
-  --color-content-placeholder: var(--color-emphasis-4);
-  --color-content-placeholder-highlight: hsla(0, 0%, 100%, 0.6);
+  --color-outline: hsla(0deg, 0%, calc(80% - var(--contrast-percent)), min(1, var(--contrast, 0)));
+}
 
-  --shadow-key-alpha: 0.14;
-  --shadow-ambient-alpha: 0.12;
-  --shadow-ambient-2-alpha: 0.20;
-
+@mixin emphasis {
   --color-emphasis-5: rgba(0, 0, 0, 87%);
   --color-emphasis-4: rgba(0, 0, 0, 60%);
   --color-emphasis-3: rgba(0, 0, 0, 38%);
   --color-emphasis-2: rgba(0, 0, 0, 12%);
   --color-emphasis-1: rgba(0, 0, 0, 4%);
+}
 
-  --color-outline: hsla(0deg, 0%, calc(80% - var(--contrast-percent)), min(1, var(--contrast, 0)));
-
+@mixin states {
   --state-hover-alpha: calc(.14 + var(--primary-constrast-patch, 0));
   --state-focused-alpha: calc(.22 + var(--primary-constrast-patch, 0));
   --state-pressed-alpha: calc(.2 + var(--primary-constrast-patch, 0));
   --state-dragged-alpha: calc(.18 + var(--primary-constrast-patch, 0));
   --state-selected-alpha: calc(.18 + var(--primary-constrast-patch, 0));
   --state-disabled-alpha: calc(.38 + var(--primary-constrast-patch, 0));
+}
 
+@mixin placeholder {
+  --color-content-placeholder: var(--color-emphasis-4);
+  --color-content-placeholder-highlight: hsla(0, 0%, 100%, 0.6);
+}
+
+@mixin elevation {
+  --shadow-key-alpha: 0.14;
+  --shadow-ambient-alpha: 0.12;
+  --shadow-ambient-2-alpha: 0.20;
+}
+
+@mixin scrollbar {
   --color-scrollbar-thumb: rgba(31, 41, 51, 0.2);
   --color-scrollbar-thumb-hover: rgba(31, 41, 51, 0.3);
   --color-scrollbar-track: rgba(31, 41, 51, 0.02);
+}
+
+@mixin theme {
+  @include common-colors;
+  @include emphasis;
+  @include states;
+  @include placeholder;
+  @include elevation;
+  @include scrollbar;
 }
 
 @mixin more-contrast {
