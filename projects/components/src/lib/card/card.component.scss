@@ -8,12 +8,12 @@
   flex-direction: column;
   flex-grow: 1;
   position: relative;
-  background-color: var(--color-surface);
-  border-radius: var(--border-radius-m);
+  background-color: var(--md-sys-color-surface);
+  border-radius: var(--md-sys-border-radius-m);
   border: .0625rem solid transparent;
 
   &.type-outlined {
-    border-color: var(--color-emphasis-2);
+    border-color: var(--md-sys-color-emphasis-2);
   }
 
   &.type-elevated {
@@ -24,7 +24,7 @@
 .image-container {
   width: 100%;
   max-height: var(--card-image-max-height);
-  border-radius: var(--border-radius-m);
+  border-radius: var(--md-sys-border-radius-m);
   overflow: hidden;
 
   img {

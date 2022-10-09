@@ -41,11 +41,11 @@ export const parameters = {
     values: [
       {
         name: 'surface',
-        value: 'var(--color-surface)',
+        value: 'var(--md-sys-color-surface)',
       },
       {
         name: 'background',
-        value: 'var(--color-background)',
+        value: 'var(--md-sys-color-background)',
       },
       {
         name: 'system',

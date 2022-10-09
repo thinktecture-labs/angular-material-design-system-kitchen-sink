@@ -15,7 +15,7 @@
         transparent 100%
     ) center left;
     background-size: 100% 100%;
-    border-radius: var(--border-radius-l);
+    border-radius: var(--md-sys-border-radius-l);
     position: absolute;
     top: 0;
     right: 0;
@@ -63,10 +63,10 @@
 @mixin text {
   @include content-placeholder-base;
   line-height: 1rem;
-  border-radius: var(--border-radius-l);
+  border-radius: var(--md-sys-border-radius-l);
 
   &.labs-show-content-placeholder {
-    background: var(--color-emphasis-2);
+    background: var(--md-sys-color-emphasis-2);
   }
 
   &::before {
@@ -95,7 +95,7 @@
   @include content-placeholder-base;
 
   &.labs-show-content-placeholder {
-    background: var(--color-emphasis-2);
+    background: var(--md-sys-color-emphasis-2);
   }
 
   &::before {

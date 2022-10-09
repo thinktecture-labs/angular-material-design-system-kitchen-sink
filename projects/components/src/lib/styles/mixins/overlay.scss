@@ -8,7 +8,7 @@
   @if not $after {
     $class: 'before';
     $zIndex: var(--highlight-content);
-    $color: var(--color-highlight);
+    $color: var(--md-sys-color-highlight);
   }
 
   &:#{$class} {

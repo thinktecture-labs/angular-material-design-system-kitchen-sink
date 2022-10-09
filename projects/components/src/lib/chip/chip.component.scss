@@ -6,17 +6,17 @@
   @include state.interactive;
   @include typography.body-m;
   font-weight: 200;
-  --chip-background-color: var(--color-primary);
-  --chip-color: var(--color-on-primary);
+  --chip-background-color: var(--md-sys-color-primary);
+  --chip-color: var(--md-sys-color-on-primary);
   height: 2rem;
   display: inline-flex;
   align-items: center;
   padding: 0 .75rem;
-  border-radius: var(--border-radius-l)
+  border-radius: var(--md-sys-border-radius-l)
 }
 
 :host(.type-outlined) {
-  border: 1px solid var(--color-emphasis-2);
+  border: 1px solid var(--md-sys-color-emphasis-2);
 }
 
 :host(.type-filled) {
@@ -31,5 +31,5 @@
     @include elevation.get(0);
   }
 
-  background-color: var(--color-surface);
+  background-color: var(--md-sys-color-surface);
 }

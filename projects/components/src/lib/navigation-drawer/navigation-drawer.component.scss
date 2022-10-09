@@ -28,9 +28,9 @@
   padding: .75rem 1rem 1.25rem 1rem;
   gap: var(--gap-m);
   height: 100%;
-  background-color: var(--color-background);
-  border-top-right-radius: var(--border-radius-l);
-  border-bottom-right-radius: var(--border-radius-l);
+  background-color: var(--md-sys-color-background);
+  border-top-right-radius: var(--md-sys-border-radius-l);
+  border-bottom-right-radius: var(--md-sys-border-radius-l);
   position: relative;
   overflow: hidden;
   border: 1px solid transparent;

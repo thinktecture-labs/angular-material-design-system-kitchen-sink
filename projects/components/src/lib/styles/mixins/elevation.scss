@@ -29,7 +29,7 @@ $elevations: (
   $highlight: list.nth($elevation, 1);
   @include highlight.create($highlight);
   z-index: $index * 100;
-  box-shadow: shadow(list.nth($elevation, 2), var(--shadow-key-alpha)),
-  shadow(list.nth($elevation, 3), var(--shadow-ambient-alpha)),
-  shadow(list.nth($elevation, 4), var(--shadow-ambient-2-alpha));
+  box-shadow: shadow(list.nth($elevation, 2), var(--md-sys-shadow-key-alpha)),
+  shadow(list.nth($elevation, 3), var(--md-sys-shadow-ambient-alpha)),
+  shadow(list.nth($elevation, 4), var(--md-sys-shadow-ambient-2-alpha));
 }

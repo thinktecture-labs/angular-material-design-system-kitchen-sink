@@ -1,53 +1,51 @@
 @use 'defaults';
 
 @mixin common-colors {
-  --color-primary: #3D6FB4;
-  --color-on-primary: white;
+  --md-sys-color-primary: #3D6FB4;
+  --md-sys-color-on-primary: white;
 
-  --contrast-percent: calc(var(--contrast, 0) * 1%);
+  --md-sys-color-background: hsl(225deg 22% 96%);
+  --md-sys-color-on-background: hsl(0, 0%, 40%);
+  --md-sys-color-surface: white;
+  --md-sys-color-on-surface: hsl(0, 0%, 30%);
 
-  --color-background: hsl(225deg 22% calc(96% + var(--contrast-percent)));
-  --color-on-background: hsl(0, 0%, 40%);
-  --color-surface: white;
-  --color-on-surface: hsl(0, 0%, 30%);
+  --md-sys-color-highlight: white;
 
-  --color-highlight: white;
-
-  --color-outline: hsla(0deg, 0%, calc(80% - var(--contrast-percent)), min(1, var(--contrast, 0)));
+  --md-sys-color-outline: hsla(0deg, 0%, 80%, 1);
 }
 
 @mixin emphasis {
-  --color-emphasis-5: rgba(0, 0, 0, 87%);
-  --color-emphasis-4: rgba(0, 0, 0, 60%);
-  --color-emphasis-3: rgba(0, 0, 0, 38%);
-  --color-emphasis-2: rgba(0, 0, 0, 12%);
-  --color-emphasis-1: rgba(0, 0, 0, 4%);
+  --md-sys-color-emphasis-5: rgba(0, 0, 0, 87%);
+  --md-sys-color-emphasis-4: rgba(0, 0, 0, 60%);
+  --md-sys-color-emphasis-3: rgba(0, 0, 0, 38%);
+  --md-sys-color-emphasis-2: rgba(0, 0, 0, 12%);
+  --md-sys-color-emphasis-1: rgba(0, 0, 0, 4%);
 }
 
 @mixin states {
-  --state-hover-alpha: calc(.14 + var(--primary-constrast-patch, 0));
-  --state-focused-alpha: calc(.22 + var(--primary-constrast-patch, 0));
-  --state-pressed-alpha: calc(.2 + var(--primary-constrast-patch, 0));
-  --state-dragged-alpha: calc(.18 + var(--primary-constrast-patch, 0));
-  --state-selected-alpha: calc(.18 + var(--primary-constrast-patch, 0));
-  --state-disabled-alpha: calc(.38 + var(--primary-constrast-patch, 0));
+  --md-sys-state-hover-alpha: .14;
+  --md-sys-state-focused-alpha: .22;
+  --md-sys-state-pressed-alpha: .2;
+  --md-sys-state-dragged-alpha: .18;
+  --md-sys-state-selected-alpha: .18;
+  --md-sys-state-disabled-alpha: .38;
 }
 
 @mixin placeholder {
-  --color-content-placeholder: var(--color-emphasis-4);
+  --color-content-placeholder: var(--md-sys-color-emphasis-4);
   --color-content-placeholder-highlight: hsla(0, 0%, 100%, 0.6);
 }
 
 @mixin elevation {
-  --shadow-key-alpha: 0.14;
-  --shadow-ambient-alpha: 0.12;
-  --shadow-ambient-2-alpha: 0.20;
+  --md-sys-shadow-key-alpha: 0.14;
+  --md-sys-shadow-ambient-alpha: 0.12;
+  --md-sys-shadow-ambient-2-alpha: 0.20;
 }
 
 @mixin scrollbar {
-  --color-scrollbar-thumb: rgba(31, 41, 51, 0.2);
-  --color-scrollbar-thumb-hover: rgba(31, 41, 51, 0.3);
-  --color-scrollbar-track: rgba(31, 41, 51, 0.02);
+  --md-sys-color-scrollbar-thumb: rgba(31, 41, 51, 0.2);
+  --md-sys-color-scrollbar-thumb-hover: rgba(31, 41, 51, 0.3);
+  --md-sys-color-scrollbar-track: rgba(31, 41, 51, 0.02);
 }
 
 @mixin theme {
@@ -59,29 +57,14 @@
   @include scrollbar;
 }
 
-@mixin more-contrast {
-  --contrast: 2;
+.labs-light-theme {
+  @include theme;
+  @include defaults.theme;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
     @include theme;
   }
-}
-
-@media (prefers-color-scheme: light) and (prefers-contrast: more) {
-  :root {
-    @include more-contrast;
-  }
-}
-
-
-.labs-light-theme {
-  @include theme;
-
-  @media (prefers-contrast: more) {
-    @include more-contrast;
-  }
-
-  @include defaults.theme;
 }

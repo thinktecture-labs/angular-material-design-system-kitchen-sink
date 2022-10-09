@@ -7,29 +7,29 @@
 }
 
 @mixin hover($scale: 1) {
-  @include overlay.create(var(--state-hover-alpha), $scale);
+  @include overlay.create(var(--md-sys-state-hover-alpha), $scale);
 }
 
 @mixin focused($scale: 1) {
-  @include overlay.create(var(--state-focused-alpha), $scale);
+  @include overlay.create(var(--md-sys-state-focused-alpha), $scale);
 }
 
 @mixin pressed($scale: 1) {
-  @include overlay.create(var(--state-pressed-alpha), $scale);
+  @include overlay.create(var(--md-sys-state-pressed-alpha), $scale);
 }
 
 @mixin dragged($scale: 1) {
   @include elevation.get(8);
-  @include overlay.create(var(--state-dragged-alpha), $scale);
+  @include overlay.create(var(--md-sys-state-dragged-alpha), $scale);
 }
 
 @mixin selected($scale: 1) {
-  @include overlay.create(var(--state-selected-alpha), $scale);
+  @include overlay.create(var(--md-sys-state-selected-alpha), $scale);
 }
 
 @mixin disabled($scale: 1) {
   @include overlay.create(0, $scale);
-  opacity: var(--state-disabled-alpha);
+  opacity: var(--md-sys-state-disabled-alpha);
   cursor: default;
 }
 
@@ -69,8 +69,8 @@
 @mixin interactive-primary {
   --primary-constrast-patch: 1;
   @include interactive;
-  --color-surface: var(--color-primary);
-  --color-on-surface: var(--color-on-primary);
+  --md-sys-color-surface: var(--md-sys-color-primary);
+  --md-sys-color-on-surface: var(--md-sys-color-on-primary);
   --color-overlay: white;
 }
 

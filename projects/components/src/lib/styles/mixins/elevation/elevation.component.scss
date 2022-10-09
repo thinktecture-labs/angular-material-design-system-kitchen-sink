@@ -4,7 +4,7 @@ $elevations: 0,1,2,3,4,6,8,12,16,24;
 
 .item {
   height: 4rem;
-  background-color: var(--color-surface);
+  background-color: var(--md-sys-color-surface);
   padding: var(--gap-l);
 
   @each $elevation in $elevations {

@@ -8,8 +8,8 @@
 :host {
   @include state.interactive;
   border-radius: 1rem;
-  background-color: var(--color-primary); // TODO use the right color
-  color: var(--color-on-primary); // TODO use the right color
+  background-color: var(--md-sys-color-primary); // TODO use the right color
+  color: var(--md-sys-color-on-primary); // TODO use the right color
   display: grid;
   place-items: center;
   width: 3.5rem;

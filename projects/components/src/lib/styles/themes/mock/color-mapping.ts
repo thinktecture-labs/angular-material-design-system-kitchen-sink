@@ -13,34 +13,34 @@ export const GROUPS: ColorGroup[] = [
   {
     key: 'core',
     colors: [
-      {key: '--color-primary', description: 'The primary color.'},
+      {key: '--md-sys-color-primary', description: 'The primary color.'},
       {
         key: '--color-on-primary',
         description: 'The content color that should be used for elements with primary color as background.'
       },
-      {key: '--color-background', description: 'The background color'},
+      {key: '--md-sys-color-background', description: 'The background color'},
       {
-        key: '--color-on-background',
+        key: '--md-sys-color-on-background',
         description: 'The content color that should be used for elements with background color as background'
       },
-      {key: '--color-surface', description: 'The background color for surfaces like cards.'},
-      {key: '--color-on-surface'},
+      {key: '--md-sys-color-surface', description: 'The background color for surfaces like cards.'},
+      {key: '--md-sys-color-on-surface'},
     ]
   },
   {
     key: 'emphasis',
     colors: [
-      {key: '--color-emphasis-1'},
-      {key: '--color-emphasis-2'},
-      {key: '--color-emphasis-3'},
-      {key: '--color-emphasis-4'},
-      {key: '--color-emphasis-5'},
+      {key: '--md-sys-color-emphasis-1'},
+      {key: '--md-sys-color-emphasis-2'},
+      {key: '--md-sys-color-emphasis-3'},
+      {key: '--md-sys-color-emphasis-4'},
+      {key: '--md-sys-color-emphasis-5'},
     ]
   },
   {
     key: 'elevation',
     colors: [
-      {key: '--color-highlight'},
+      {key: '--md-sys-color-highlight'},
     ]
   },
   {
@@ -53,8 +53,8 @@ export const GROUPS: ColorGroup[] = [
   {
     key: 'outline',
     colors: [
-      {key: '--color-outline'},
-      {key: '--color-outline-focus'}
+      {key: '--md-sys-color-outline'},
+      {key: '--md-sys-color-outline-focus'}
     ]
   }
 ]
