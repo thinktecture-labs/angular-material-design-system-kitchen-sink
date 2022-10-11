@@ -1,0 +1,19 @@
+@use 'breakpoints';
+
+
+.item {
+  min-width: 5rem;
+  max-width: 5rem;
+  height: 2rem;
+  background-color: var(--md-sys-color-surface-emphasis-2);
+}
+
+:host {
+  display: flex;
+  gap: var(--labs-size-4);
+
+  @include breakpoints.use(xs, s){
+    flex-direction: column;
+  }
+}
+

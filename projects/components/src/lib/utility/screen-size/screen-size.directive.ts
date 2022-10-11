@@ -108,10 +108,10 @@ export class XSmallAndSmallScreenSizeDirective extends AbstractScreenSizeDirecti
 }
 
 @Directive({
-  selector: '[labsScreenXMediumAndLarge]',
-  inputs: ['create: labsScreenXMediumAndLarge'],
+  selector: '[labsScreenMediumAndLarge]',
+  inputs: ['create: labsScreenMediumAndLarge'],
 })
-export class XMediumAndLargeScreenSizeDirective extends AbstractScreenSizeDirective {
+export class MediumAndLargeScreenSizeDirective extends AbstractScreenSizeDirective {
   constructor(screenSizeService: ScreenSizeService, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<any>,
               changeDetectorRef: ChangeDetectorRef) {
     super([Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge], screenSizeService, viewContainerRef, templateRef, changeDetectorRef);

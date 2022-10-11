@@ -5,6 +5,7 @@ import {
   MediumScreenSizeDirective,
   SmallScreenSizeDirective,
   XLargeScreenSizeDirective,
+  MediumAndLargeScreenSizeDirective,
   XSmallAndSmallScreenSizeDirective,
   XSmallScreenSizeDirective
 } from './screen-size.directive';
@@ -17,6 +18,7 @@ import {
     LargeScreenSizeDirective,
     XLargeScreenSizeDirective,
     XSmallAndSmallScreenSizeDirective,
+    MediumAndLargeScreenSizeDirective
   ],
   imports: [CommonModule],
   exports: [
@@ -26,6 +28,7 @@ import {
     LargeScreenSizeDirective,
     XLargeScreenSizeDirective,
     XSmallAndSmallScreenSizeDirective,
+    MediumAndLargeScreenSizeDirective
   ]
 })
 export class ScreenSizeModule {
