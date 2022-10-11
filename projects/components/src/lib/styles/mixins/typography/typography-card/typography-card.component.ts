@@ -31,6 +31,10 @@ export class TypographyCardComponent implements OnChanges, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    this.computeAndAssignStyle();
+  }
+
+  private computeAndAssignStyle() {
     const {nativeElement} = this.sample;
     const {nativeWindow} = this.windowService;
     const style = nativeWindow.getComputedStyle(nativeElement);
@@ -41,5 +45,4 @@ export class TypographyCardComponent implements OnChanges, AfterViewInit {
     this.fontSize = style.fontSize;
     this.weight = style.fontWeight;
   }
-
 }
