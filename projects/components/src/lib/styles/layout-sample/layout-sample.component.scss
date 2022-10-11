@@ -1,0 +1,49 @@
+@use 'typography';
+@use 'elevation';
+@use 'breakpoints';
+
+.card {
+  @include elevation.get(1);
+  background: var(--md-sys-color-surface);
+  width: 10rem;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  padding: var(--labs-size-5);
+  gap: var(--labs-size-4);
+
+  .actions {
+    display: flex;
+    gap: var(--labs-size-2);
+
+    .action {
+      width: var(--labs-size-6);
+      aspect-ratio: 1/1;
+      background-color: var(--md-sys-color-surface-emphasis-1);
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--labs-size-6)
+}
+
+
+.page-title {
+  @include typography.display-l;
+}
+
+:host {
+  padding: var(--labs-size-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--labs-size-7);
+  transition: all .3s ease;
+
+  @include breakpoints.use(xs, s) {
+    padding: var(--labs-size-6);
+    gap: var(--labs-size-5);
+  }
+}

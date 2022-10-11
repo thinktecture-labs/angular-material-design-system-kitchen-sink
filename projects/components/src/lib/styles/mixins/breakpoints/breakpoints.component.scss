@@ -11,6 +11,7 @@
 :host {
   display: flex;
   gap: var(--labs-size-4);
+  flex-direction: row;
 
   @include breakpoints.use(xs, s){
     flex-direction: column;
