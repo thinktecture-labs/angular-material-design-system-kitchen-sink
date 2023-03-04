@@ -19,6 +19,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       transition('closed => openedOverlay', animate('0.3s ease-out')),
       transition('openedOverlay => closed', animate('0.15s ease-in')),
     ]),
+
   ],
 })
 export class DrawerComponent {

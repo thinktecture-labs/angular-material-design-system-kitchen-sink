@@ -3,7 +3,7 @@ import {TALK_MOCK_DATA} from './talk.data';
 import {BehaviorSubject, combineLatest, map, of} from 'rxjs';
 import {Talk} from './talk.model';
 import {FormControl} from '@angular/forms';
-import {animate, query, stagger, style, transition, trigger} from '@angular/animations';
+import {animate, query, sequence, stagger, style, transition, trigger} from '@angular/animations';
 
 const fadeInAnimation = [transition(':enter', [
   style({opacity: 0, transform: 'translateY(-10px)'}),
@@ -35,6 +35,18 @@ const fadeInAnimation = [transition(':enter', [
         ),
       ]),
     ]),
+
+    //Group
+    trigger('listAnimationGroup', [
+      transition(':enter', [
+        style({opacity: 0, transform: 'scale(0.3)'}),
+        sequence([
+          animate('500ms', style({opacity: 1})),
+          animate('300ms ease-in', style({transform: 'scale(1)'})),
+        ]),
+      ]),
+    ]),
+
   ],
 })
 export class HomeComponent implements AfterViewInit {

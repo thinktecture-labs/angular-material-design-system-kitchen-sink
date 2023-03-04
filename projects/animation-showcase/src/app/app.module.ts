@@ -9,7 +9,6 @@ import {LogoModule} from '../../../components/src/lib/logo/logo.module';
 import {ListModule} from '../../../components/src/lib/list/list.module';
 import {HomeComponent} from './components/home/home.component';
 import {DrawerToggleComponent} from './components/drawer/toggle/drawer-toggle.component';
-import {ChipModule} from '../../../components/src/lib/chip/chip.module';
 import {CardComponent} from './components/card/card.component';
 import {ChipComponent} from './components/chip/chip.component';
 import {FormsModule} from '@angular/forms';
@@ -38,7 +37,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     FormsModule,
     LogoModule,
     ListModule,
-    ChipModule,
     HttpClientModule,
     MatSliderModule,
   ],
