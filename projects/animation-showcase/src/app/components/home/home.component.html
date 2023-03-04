@@ -1,0 +1,14 @@
+<header>
+  <h1>Animations</h1>
+</header>
+
+<div class="content">
+  <input #filter="ngModel" ngModel placeholder="Search Talks" type="text">
+  <ng-container *ngFor="let talk of data$ | async">
+    <app-card [imageSrc]="talk.bannerImageSrc" [subTitle]="getSubtitle(talk)" [title]="talk.title" type="filled">
+      <div class="chips">
+        <app-chip *ngFor="let speaker of talk.speakers">{{speaker}}</app-chip>
+      </div>
+    </app-card>
+  </ng-container>
+</div>

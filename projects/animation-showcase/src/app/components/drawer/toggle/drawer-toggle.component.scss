@@ -1,0 +1,39 @@
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+}
+
+.bar {
+  background-color: var(--color-on-backgorund);
+  border: 1px solid transparent;
+  height: 0.125rem;
+  width: 1rem;
+  transition: transform .3s ease;
+  border-radius: 10rem;
+
+  transform: scaleX(.8) translateX(-11%);
+
+  &:first-child {
+    transform: scaleX(1);
+  }
+
+  &:last-child {
+    transform: scaleX(.6) translateX(-30%);
+  }
+}
+
+:host {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+
+  &.collapsed {
+    .bar {
+      transform: scaleX(.2) scaleY(1.5);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+
+:host {
+  --card-image-max-height: 40%;
+  display: grid;
+  grid-template-rows: 8rem 1fr 4rem;
+  position: relative;
+  background-color: white;
+  border-radius: 3rem;
+  border: .0625rem solid transparent;
+  overflow: hidden;
+  color: var(--color-outline);
+
+  &.type-outlined {
+    border-color: var(--md-sys-color-surface-emphasis-2);
+  }
+
+}
+
+.image-container {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.title {
+  font-weight: 200;
+  padding: 1rem 1rem 0 1rem;
+  font-size: 1rem;
+
+  .main {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.content {
+  font-size: .75rem;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.actions {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.chips {
+  padding: 1rem 1rem;
+}

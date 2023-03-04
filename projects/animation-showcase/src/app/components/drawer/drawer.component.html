@@ -1,0 +1,31 @@
+<ng-container *ngIf="navigationDrawerService.state$ | async as state">
+  <div (click)="toggle()" [ngClass]="['state-' + state]" class="backdrop"></div>
+  <div [ngClass]="['state-' + state]" class="drawer">
+    <div class="top">
+      <div class="logo">
+        <img src="assets/logo.svg">
+      </div>
+    </div>
+    <labs-list>
+      <labs-list-item>
+        <a (click)="toggle()" routerLink="home">
+          <h3>Home</h3>
+        </a>
+      </labs-list-item>
+      <labs-list-item>
+        <a (click)="toggle()" routerLink="functions">
+          <h3>Functions</h3>
+        </a>
+      </labs-list-item>
+      <labs-list-item>
+        <a (click)="toggle()" routerLink="player">
+          <h3>Player</h3>
+        </a>
+      </labs-list-item>
+    </labs-list>
+
+    <div class="bottom-row">
+      <app-drawer-toggle></app-drawer-toggle>
+    </div>
+  </div>
+</ng-container>

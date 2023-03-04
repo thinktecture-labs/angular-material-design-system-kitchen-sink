@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  max-height: calc(100vh - 6rem);
+  position: relative;
+  color: var(--color-on-backgorund);
+
+  overflow: hidden;
+}
+
+
+.content {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem 6rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 6.375rem - 6rem);
+}
+
+.chips {
+  display: flex;
+  gap: 0.5rem;
+}

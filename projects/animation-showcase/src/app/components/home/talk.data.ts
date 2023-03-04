@@ -1,0 +1,48 @@
+import {Talk} from './talk.model';
+
+export const TALK_MOCK_DATA: Talk[] = [
+  {
+    title: "Angular Kickstart: von 0 auf 100",
+    conference: "Angular Days 2023",
+    startDate: '20.03.2023',
+    endDate: '23.03.2023',
+    location: "München",
+    country: "DE",
+    bannerImageSrc: "https://javascript-days.de/wp-content/uploads/2019/04/JSD19_Website_Subheader_2200x480_v1.jpg",
+    tags: ["angular"],
+    speakers: ["Chris", "Sascha"],
+  },
+  {
+    title: "3D im Web mit Babylon.js – Ihre Web-App in Szene gesetzt",
+    conference: "Angular Days 2023",
+    startDate: '20.03.2023',
+    endDate: '23.03.2023',
+    location: "München",
+    country: "DE",
+    bannerImageSrc: "https://javascript-days.de/wp-content/uploads/2019/04/JSD19_Website_Subheader_2200x480_v1.jpg",
+    tags: ["angular"],
+    speakers: ["Max"],
+  },
+  {
+    title: "@ngrx/component-store: Reaktives State-Management auf Komponenten-Ebene",
+    conference: "Angular Days 2023",
+    startDate: '20.03.2023',
+    endDate: '23.03.2023',
+    location: "München",
+    country: "DE",
+    bannerImageSrc: "https://javascript-days.de/wp-content/uploads/2019/04/JSD19_Website_Subheader_2200x480_v1.jpg",
+    tags: ["angular"],
+    speakers: ["Yannick"],
+  },
+  {
+    title: "Web Animations: Welcome to the jungle",
+    conference: "Angular Days 2023",
+    startDate: '20.03.2023',
+    endDate: '23.03.2023',
+    location: "München",
+    country: "DE",
+    bannerImageSrc: "https://javascript-days.de/wp-content/uploads/2019/04/JSD19_Website_Subheader_2200x480_v1.jpg",
+    tags: ["angular"],
+    speakers: ["Sascha"],
+  },
+]

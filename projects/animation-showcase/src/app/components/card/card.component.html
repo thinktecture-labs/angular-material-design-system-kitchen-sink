@@ -1,0 +1,10 @@
+<div [style.background-image]="source" class="image-container">
+</div>
+<div *ngIf="title" class="title">
+  <div class="main">{{ title }}</div>
+  <ng-container *ngIf="subTitle">{{ subTitle }}</ng-container>
+</div>
+<div class="chips">
+  <ng-content></ng-content>
+</div>
+

@@ -1,0 +1,17 @@
+:host {
+  font-weight: 200;
+  --chip-background-color: var(--color-primary);
+  --chip-color: var(--color-on-primary);
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-radius: 3rem;
+  font-size: 0.75rem;
+}
+
+:host(.type-filled) {
+  background: var(--chip-background-color);
+  color: var(--chip-color);
+}
+

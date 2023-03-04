@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  border-top: 1px solid var(--color-outline);
+  color: var(--color-on-backgorund);
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-background);
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+  align-items: flex-start;
+}
+
+.bar {
+  background-color: var(--color-on-backgorund);
+  border: 1px solid transparent;
+  height: 0.125rem;
+  width: 1rem;
+  transition: transform .3s ease;
+
+  transform: scaleX(.8) translateX(-11%);
+
+  &:first-child {
+    transform: scaleX(1);
+  }
+
+  &:last-child {
+    transform: scaleX(.6) translateX(-30%);
+  }
+}

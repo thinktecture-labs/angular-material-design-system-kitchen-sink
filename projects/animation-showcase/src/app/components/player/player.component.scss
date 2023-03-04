@@ -1,0 +1,21 @@
+mat-slider {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 6rem;
+  height: calc(100vh - 6.375rem - 6rem);
+  max-height: calc(100vh - 6.375rem - 6rem);
+  align-items: center;
+  gap: 3rem;
+}
+
+.square {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 0.25rem;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-emphasis);
+}

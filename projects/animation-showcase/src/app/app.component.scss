@@ -1,0 +1,11 @@
+:host {
+  display: grid;
+  grid-template-rows: 0 1fr auto;
+  background-color: var(--color-background);
+  height: 100vh;
+  position: relative;
+}
+
+main {
+  padding: 2rem;
+}
