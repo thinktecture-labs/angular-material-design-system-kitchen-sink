@@ -15,7 +15,6 @@ import {FormsModule} from '@angular/forms';
 import {FunctionsComponent} from './components/functions/functions.component';
 import {PlayerComponent} from './components/player/player.component';
 import {HttpClientModule} from '@angular/common/http';
-import {MatSliderModule} from '@angular/material/slider';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -38,7 +37,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     LogoModule,
     ListModule,
     HttpClientModule,
-    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
