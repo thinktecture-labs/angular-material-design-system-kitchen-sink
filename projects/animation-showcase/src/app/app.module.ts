@@ -16,7 +16,6 @@ import {FormsModule} from '@angular/forms';
 import {FunctionsComponent} from './components/functions/functions.component';
 import {PlayerComponent} from './components/player/player.component';
 import {HttpClientModule} from '@angular/common/http';
-import {MatSliderModule} from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -38,7 +37,6 @@ import {MatSliderModule} from '@angular/material/slider';
     ListModule,
     ChipModule,
     HttpClientModule,
-    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
