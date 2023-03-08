@@ -12,7 +12,7 @@ import {DrawerToggleComponent} from './components/drawer/toggle/drawer-toggle.co
 import {CardComponent} from './components/card/card.component';
 import {ChipComponent} from './components/chip/chip.component';
 import {FormsModule} from '@angular/forms';
-import {FunctionsComponent} from './components/functions/functions.component';
+import {GalleryComponent} from './components/gallery/gallery.component';
 import {PlayerComponent} from './components/player/player.component';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -25,7 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
     DrawerToggleComponent,
     CardComponent,
     ChipComponent,
-    FunctionsComponent,
+    GalleryComponent,
     PlayerComponent,
   ],
   imports: [

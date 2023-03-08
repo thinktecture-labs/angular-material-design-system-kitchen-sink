@@ -3,8 +3,20 @@
   display: block;
 }
 
+a {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-on-backgorund);
+  z-index: 20;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
 .backdrop {
-  z-index: 16000; // TODO move the definition to common variables
+  z-index: 16000;
   background-color: var(--color-backdrop);
   position: fixed;
   top: 0;
@@ -23,7 +35,7 @@
 }
 
 .drawer {
-  z-index: 16000; // TODO move the definition to common variables
+  z-index: 16000;
   display: flex;
   flex-direction: column;
   width: 22.5rem;
