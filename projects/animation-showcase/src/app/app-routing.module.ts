@@ -6,9 +6,9 @@ import {PlayerComponent} from './components/player/player.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'functions', component: FunctionsComponent},
-  {path: 'player', component: PlayerComponent},
+  {path: 'home', component: HomeComponent, data: {animation: 'home'}},
+  {path: 'functions', component: FunctionsComponent, data: {animation: 'functions'}},
+  {path: 'player', component: PlayerComponent, data: {animation: 'player'}},
 ];
 
 @NgModule({
