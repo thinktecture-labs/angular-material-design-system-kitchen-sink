@@ -15,6 +15,7 @@ import {FormsModule} from '@angular/forms';
 import {GalleryComponent} from './components/gallery/gallery.component';
 import {PlayerComponent} from './components/player/player.component';
 import {HttpClientModule} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {HttpClientModule} from '@angular/common/http';
     LogoModule,
     ListModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
