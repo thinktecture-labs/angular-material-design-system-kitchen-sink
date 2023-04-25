@@ -3,6 +3,7 @@ import {Talk} from './talk.model';
 
 export const TALK_MOCK_DATA_NG_DAYS: Talk[] = [
   {
+    id: crypto.randomUUID(),
     title: "Angular Kickstart: von 0 auf 100",
     conference: "Angular Days 2023",
     startDate: '20.03.2023',
@@ -14,6 +15,7 @@ export const TALK_MOCK_DATA_NG_DAYS: Talk[] = [
     speakers: ["Chris", "Sascha"],
   },
   {
+    id: crypto.randomUUID(),
     title: "3D im Web mit Babylon.js – Ihre Web-App in Szene gesetzt",
     conference: "Angular Days 2023",
     startDate: '20.03.2023',
@@ -25,6 +27,7 @@ export const TALK_MOCK_DATA_NG_DAYS: Talk[] = [
     speakers: ["Max"],
   },
   {
+    id: crypto.randomUUID(),
     title: "@ngrx/component-store: Reaktives State-Management auf Komponenten-Ebene",
     conference: "Angular Days 2023",
     startDate: '20.03.2023',
@@ -36,6 +39,7 @@ export const TALK_MOCK_DATA_NG_DAYS: Talk[] = [
     speakers: ["Yannick"],
   },
   {
+    id: crypto.randomUUID(),
     title: "Web Animations: Welcome to the jungle",
     conference: "Angular Days 2023",
     startDate: '20.03.2023',

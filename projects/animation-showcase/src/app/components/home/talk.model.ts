@@ -1,4 +1,5 @@
 export interface Talk {
+  id: string;
   title: string;
   conference: string;
   startDate: string;

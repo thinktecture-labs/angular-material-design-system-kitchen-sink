@@ -16,6 +16,8 @@ import {GalleryComponent} from './components/gallery/gallery.component';
 import {PlayerComponent} from './components/player/player.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FancyRouterOutlet} from './fancy_router_outlet';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ChipComponent,
     GalleryComponent,
     PlayerComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ListModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FancyRouterOutlet,
   ],
   providers: [],
   bootstrap: [AppComponent],

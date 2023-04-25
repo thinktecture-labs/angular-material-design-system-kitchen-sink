@@ -5,6 +5,9 @@
   color: var(--color-on-backgorund);
   padding: 2rem;
   overflow: hidden;
+
+  view-transition-name: header;
+  contain: layout;
 }
 
 

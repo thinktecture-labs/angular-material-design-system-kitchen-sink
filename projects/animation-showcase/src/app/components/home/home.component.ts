@@ -1,8 +1,8 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
-import {TALK_MOCK_DATA} from './talk.data';
-import {BehaviorSubject, combineLatest, map, of} from 'rxjs';
+import {AfterViewInit, Component, inject, ViewChild} from '@angular/core';
+import {BehaviorSubject, combineLatest, map} from 'rxjs';
 import {Talk} from './talk.model';
 import {FormControl} from '@angular/forms';
+import {DataService} from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -12,9 +12,9 @@ import {FormControl} from '@angular/forms';
 export class HomeComponent implements AfterViewInit {
 
   @ViewChild('filter') filter?: FormControl;
-
   filter$ = new BehaviorSubject<string>('')
-  data$ = combineLatest([of(TALK_MOCK_DATA), this.filter$]).pipe(map(([talks, filter]) => filter === '' ? talks : talks.filter(talk => talk.title.toUpperCase().includes(filter.toUpperCase()))));
+  private readonly dataService = inject(DataService)
+  data$ = combineLatest([this.dataService.data$, this.filter$]).pipe(map(([talks, filter]) => filter === '' ? talks : talks.filter(talk => talk.title.toUpperCase().includes(filter.toUpperCase()))));
 
   ngAfterViewInit(): void {
     if (this.filter) {
