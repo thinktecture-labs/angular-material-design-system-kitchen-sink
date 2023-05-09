@@ -10,6 +10,11 @@
   overflow: hidden;
   color: var(--color-outline);
 
+  /*
+  opacity: 0;
+  transform: translateY(-10px);
+  */
+
   &.type-outlined {
     border-color: var(--md-sys-color-surface-emphasis-2);
   }

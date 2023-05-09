@@ -20,6 +20,15 @@ export class HomeComponent implements AfterViewInit {
     if (this.filter) {
       this.filter.valueChanges.subscribe((value) => this.filter$.next(value))
     }
+
+/*
+    animate(
+      "app-card",
+      { opacity: 1, transform: 'translateY(0)' },
+      { delay: stagger(0.1, { easing: "ease-out" })  }
+    )
+*/
+
   }
 
 
