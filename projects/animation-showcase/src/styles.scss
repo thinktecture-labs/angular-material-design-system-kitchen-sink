@@ -1,3 +1,4 @@
+@use './styles/view-transitions';
 
 :root {
   --color-primary: hsl(3, 100%, 65%);
@@ -11,6 +12,9 @@
   --app-logo: url('assets/logo.svg');
 
   --gradient-stops: hsl(3, 100%, 90%), var(--color-primary), white;
+
+  --view-transition-duration: .5s;
+  --index-preview: 10000;
 }
 
 * {
@@ -72,5 +76,9 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+
+
+
 
 

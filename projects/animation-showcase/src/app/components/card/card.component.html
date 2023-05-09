@@ -1,7 +1,7 @@
 <div [style.background-image]="source" class="image-container">
 </div>
-<div *ngIf="title" class="title">
-  <div class="main">{{ title }}</div>
+<div *ngIf="talk?.title" class="title">
+  <div class="main">{{ talk?.title }}</div>
   <ng-container *ngIf="subTitle">{{ subTitle }}</ng-container>
 </div>
 <div class="chips">

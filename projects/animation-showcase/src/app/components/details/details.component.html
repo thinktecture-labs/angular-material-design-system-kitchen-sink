@@ -1,8 +1,16 @@
 <header>
-  <button><-</button>
+  <button class="back" (click)="navigateBack()"><</button>
 </header>
-<ng-container *ngIf="data$ | async as talk">
-  <img [src]="talk.bannerImageSrc">
-  <h1>{{talk.title}}</h1>
-  
-</ng-container>
+<div class="preview">
+  <img [src]="image$ |async">
+</div>
+<main class="content">
+  <h1>{{title$ | async}}</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error illum vero? Commodi delectus dicta eum
+    explicabo iure nobis non quaerat quisquam quo rerum. Ab autem corporis distinctio iure nihil.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error illum vero? Commodi delectus dicta eum
+    explicabo iure nobis non quaerat quisquam quo rerum. Ab autem corporis distinctio iure nihil.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error illum vero? Commodi delectus dicta eum
+    explicabo iure nobis non quaerat quisquam quo rerum. Ab autem corporis distinctio iure nihil.</p>
+</main>
+

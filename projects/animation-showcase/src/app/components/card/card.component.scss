@@ -16,6 +16,12 @@
 
   cursor: pointer;
 
+  &.active{
+    .image-container{
+      view-transition-name: preview;
+    }
+  }
+
 }
 
 .image-container {

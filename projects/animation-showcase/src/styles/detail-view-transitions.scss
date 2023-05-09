@@ -1,0 +1,19 @@
+@use './animations';
+
+::view-transition-old(details-page) {
+  @include animations.close-details;
+}
+
+::view-transition-new(details-content):only-child {
+ @include animations.bottom-to-top;
+}
+
+::view-transition-old(details-content):only-child {
+  @include animations.top-to-bottom;
+}
+
+::view-transition-new(details-back):only-child {
+ @include  animations.slide-from-left;
+}
+
+

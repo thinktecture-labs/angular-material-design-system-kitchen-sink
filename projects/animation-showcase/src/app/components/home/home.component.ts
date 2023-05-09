@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, inject, ViewChild} from '@angular/core';
-import {BehaviorSubject, combineLatest, map} from 'rxjs';
+import {BehaviorSubject, combineLatest, map, Observable} from 'rxjs';
 import {Talk} from './talk.model';
 import {FormControl} from '@angular/forms';
 import {DataService} from '../data.service';
@@ -14,7 +14,7 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('filter') filter?: FormControl;
   filter$ = new BehaviorSubject<string>('')
   private readonly dataService = inject(DataService)
-  data$ = combineLatest([this.dataService.data$, this.filter$]).pipe(map(([talks, filter]) => filter === '' ? talks : talks.filter(talk => talk.title.toUpperCase().includes(filter.toUpperCase()))));
+  data$: Observable<Talk[]> = combineLatest([this.dataService.data$, this.filter$]).pipe(map(([talks, filter]) => filter === '' ? talks : talks.filter(talk => talk.title.toUpperCase().includes(filter.toUpperCase()))));
 
   ngAfterViewInit(): void {
     if (this.filter) {
@@ -26,6 +26,5 @@ export class HomeComponent implements AfterViewInit {
   getSubtitle(talk: Talk): string {
     return `${talk.conference} | ${talk.startDate} - ${talk.endDate} @ ${talk.location} (${talk.country})`;
   }
-
 
 }

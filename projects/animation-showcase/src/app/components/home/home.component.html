@@ -5,8 +5,8 @@
 <div class="content">
   <input #filter="ngModel" ngModel placeholder="Search Talks" type="text">
   <ng-container *ngFor="let talk of data$ | async">
-    <app-card [imageSrc]="talk.bannerImageSrc" [routerLink]="['/details', talk.id]" [subTitle]="getSubtitle(talk)"
-              [title]="talk.title" type="filled">
+    <app-card [imageSrc]="talk?.bannerImageSrc"  [subTitle]="getSubtitle(talk)"
+              [talk]="talk" type="filled">
       <div class="chips">
         <app-chip *ngFor="let speaker of talk.speakers">{{speaker}}</app-chip>
       </div>
