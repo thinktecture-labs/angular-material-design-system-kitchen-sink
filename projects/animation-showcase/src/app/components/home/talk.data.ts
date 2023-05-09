@@ -53,6 +53,7 @@ export const TALK_MOCK_DATA_NG_DAYS: Talk[] = [
 ]
 export const TALK_MOCK_DATA_MD_DEV_DAYS: Talk[] = [
   {
+    id: crypto.randomUUID(),
     title: "Cross-Plattform-Workshop: Progressive Web Apps mit Angular – in Action",
     conference: "MD-Dev-Days 2023",
     startDate: '08.05.2023',
@@ -64,6 +65,7 @@ export const TALK_MOCK_DATA_MD_DEV_DAYS: Talk[] = [
     speakers: ["Chris"],
   },
   {
+    id: crypto.randomUUID(),
     title: "WebAssembly auf dem Server und in der Cloud mit Fermyon Spin",
     conference: "MD-Dev-Days 2023",
     startDate: '08.05.2023',
@@ -75,6 +77,7 @@ export const TALK_MOCK_DATA_MD_DEV_DAYS: Talk[] = [
     speakers: ["Thorsten"],
   },
   {
+    id: crypto.randomUUID(),
     title: "Web Animations: so verleihen Sie Ihrer Web-App den letzten Schliff",
     conference: "MD-Dev-Days 2023",
     startDate: '08.05.2023',
@@ -86,6 +89,7 @@ export const TALK_MOCK_DATA_MD_DEV_DAYS: Talk[] = [
     speakers: ["Sascha"],
   },
   {
+    id: crypto.randomUUID(),
     title: "Application Architecture – Angular Components richtig nutzen",
     conference: "MD-Dev-Days 2023",
     startDate: '08.05.2023',
@@ -97,6 +101,7 @@ export const TALK_MOCK_DATA_MD_DEV_DAYS: Talk[] = [
     speakers: ["Sascha"],
   },
   {
+    id: crypto.randomUUID(),
     title: "Progressive Web Apps: Cross-Plattform-Apps auf Desktopniveau",
     conference: "MD-Dev-Days 2023",
     startDate: '08.05.2023',
